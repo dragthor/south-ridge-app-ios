@@ -8,20 +8,59 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "PhotosViewController.h"
+#import "AboutViewController.h"
+#import "PodcastViewController.h"
+#import "NewsViewController.h"
+#import "VideoViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    
+    AboutViewController *about;
+    PhotosViewController *photos;
+    PodcastViewController *podcasts;
+    VideoViewController *videos;
+    NewsViewController *news;
+    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
+        about = [[AboutViewController alloc] initWithNibName:@"AboutView_iPhone" bundle:nil];
+        photos = [[PhotosViewController alloc] initWithNibName:@"PhotosView_iPhone" bundle:nil];
+        podcasts = [[PodcastViewController alloc] initWithNibName:@"PodcastView_iPhone" bundle:nil];
+        videos = [[VideoViewController alloc] initWithNibName:@"VideoView_iPhone" bundle:nil];
+        news = [[NewsViewController alloc] initWithNibName:@"NewsView_iPhone" bundle:nil];
     } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+        about = [[AboutViewController alloc] initWithNibName:@"AboutView_iPad" bundle:nil];
+        photos = [[PhotosViewController alloc] initWithNibName:@"PhotosView_iPad" bundle:nil];
+        podcasts = [[PodcastViewController alloc] initWithNibName:@"PodcastView_iPad" bundle:nil];
+        videos = [[VideoViewController alloc] initWithNibName:@"VideoView_iPad" bundle:nil];
+        news = [[NewsViewController alloc] initWithNibName:@"NewsView_iPad" bundle:nil];
     }
-    self.window.rootViewController = self.viewController;
+    
+    about.tabBarItem.title = @"About Us";
+    about.tabBarItem.image = [UIImage imageNamed:@"112-group.png"];
+    
+    photos.tabBarItem.title = @"Photos";
+    photos.tabBarItem.image = [UIImage imageNamed:@"86-camera.png"];
+    
+    podcasts.tabBarItem.title = @"Podcasts";
+    podcasts.tabBarItem.image = [UIImage imageNamed:@"31-ipod.png"];
+    
+    videos.tabBarItem.title = @"Videos";
+    videos.tabBarItem.image = [UIImage imageNamed:@"70-tv.png"];
+    
+    news.tabBarItem.title = @"eNews";
+    news.tabBarItem.image = [UIImage imageNamed:@"08-chat.png"];
+    
+    [tbc setViewControllers:[NSArray arrayWithObjects:photos, podcasts, videos, news, about, nil]];
+    
+    self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
     return YES;
 }

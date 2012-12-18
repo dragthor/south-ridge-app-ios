@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0217A3168079E500B65231 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0217A2168079E500B65231 /* AboutViewController.m */; };
+		AA0217C71680887500B65231 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0217C21680887500B65231 /* NewsViewController.m */; };
+		AA0217C81680887500B65231 /* PodcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0217C41680887500B65231 /* PodcastViewController.m */; };
+		AA0217C91680887500B65231 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0217C61680887500B65231 /* VideoViewController.m */; };
+		AA0217DC1680890800B65231 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0217D71680890800B65231 /* 08-chat.png */; };
+		AA0217DD1680890800B65231 /* 31-ipod.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0217D81680890800B65231 /* 31-ipod.png */; };
+		AA0217DE1680890800B65231 /* 70-tv.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0217D91680890800B65231 /* 70-tv.png */; };
+		AA0217DF1680890800B65231 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0217DA1680890800B65231 /* 86-camera.png */; };
+		AA0217E01680890800B65231 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0217DB1680890800B65231 /* 112-group.png */; };
+		AA0217E916808B2000B65231 /* NewsView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217EB16808B2000B65231 /* NewsView_iPad.xib */; };
+		AA0217ED16808B3900B65231 /* PhotosView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217EF16808B3900B65231 /* PhotosView_iPad.xib */; };
+		AA0217F016808B4600B65231 /* PhotosView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217F216808B4600B65231 /* PhotosView_iPhone.xib */; };
+		AA0217F316808B4F00B65231 /* NewsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217F516808B4F00B65231 /* NewsView_iPhone.xib */; };
+		AA0217F616808B5300B65231 /* PodcastView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217F816808B5300B65231 /* PodcastView_iPad.xib */; };
+		AA0217F916808B5700B65231 /* PodcastView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217FB16808B5700B65231 /* PodcastView_iPhone.xib */; };
+		AA0217FC16808B5A00B65231 /* VideoView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0217FE16808B5A00B65231 /* VideoView_iPad.xib */; };
+		AA0217FF16808B6000B65231 /* VideoView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA02180116808B6000B65231 /* VideoView_iPhone.xib */; };
+		AA02180216808B6700B65231 /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA02180416808B6700B65231 /* AboutView_iPhone.xib */; };
+		AA02180516808B6A00B65231 /* AboutView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA02180716808B6A00B65231 /* AboutView_iPad.xib */; };
+		AA02180B16808D0100B65231 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = AA02180916808D0100B65231 /* iPad.png */; };
+		AA02180C16808D0100B65231 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = AA02180A16808D0100B65231 /* iPhone.png */; };
 		AAF2B0E1167E84CF00B1C939 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF2B0E0167E84CF00B1C939 /* UIKit.framework */; };
 		AAF2B0E3167E84CF00B1C939 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF2B0E2167E84CF00B1C939 /* Foundation.framework */; };
 		AAF2B0E5167E84CF00B1C939 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF2B0E4167E84CF00B1C939 /* CoreGraphics.framework */; };
@@ -16,9 +37,7 @@
 		AAF2B0F3167E84CF00B1C939 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B0F2167E84CF00B1C939 /* Default.png */; };
 		AAF2B0F5167E84CF00B1C939 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B0F4167E84CF00B1C939 /* Default@2x.png */; };
 		AAF2B0F7167E84CF00B1C939 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B0F6167E84CF00B1C939 /* Default-568h@2x.png */; };
-		AAF2B0FA167E84CF00B1C939 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B0F9167E84CF00B1C939 /* ViewController.m */; };
-		AAF2B0FD167E84CF00B1C939 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B0FB167E84CF00B1C939 /* ViewController_iPhone.xib */; };
-		AAF2B100167E84CF00B1C939 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B0FE167E84CF00B1C939 /* ViewController_iPad.xib */; };
+		AAF2B0FA167E84CF00B1C939 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B0F9167E84CF00B1C939 /* PhotosViewController.m */; };
 		AAF2B11B167E85DB00B1C939 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B109167E85DB00B1C939 /* AFHTTPClient.m */; };
 		AAF2B11C167E85DB00B1C939 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B10B167E85DB00B1C939 /* AFHTTPRequestOperation.m */; };
 		AAF2B11D167E85DB00B1C939 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B10D167E85DB00B1C939 /* AFImageRequestOperation.m */; };
@@ -28,14 +47,34 @@
 		AAF2B121167E85DB00B1C939 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B116167E85DB00B1C939 /* AFURLConnectionOperation.m */; };
 		AAF2B122167E85DB00B1C939 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B118167E85DB00B1C939 /* AFXMLRequestOperation.m */; };
 		AAF2B123167E85DB00B1C939 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2B11A167E85DB00B1C939 /* UIImageView+AFNetworking.m */; };
-		AAF2B130167E906500B1C939 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B126167E906500B1C939 /* 08-chat.png */; };
-		AAF2B132167E906500B1C939 /* 31-ipod.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B128167E906500B1C939 /* 31-ipod.png */; };
-		AAF2B134167E906500B1C939 /* 70-tv.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B12A167E906500B1C939 /* 70-tv.png */; };
-		AAF2B136167E906500B1C939 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B12C167E906500B1C939 /* 86-camera.png */; };
-		AAF2B138167E906500B1C939 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF2B12E167E906500B1C939 /* 112-group.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0217A1168079E500B65231 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		AA0217A2168079E500B65231 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		AA0217C11680887500B65231 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		AA0217C21680887500B65231 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		AA0217C31680887500B65231 /* PodcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastViewController.h; sourceTree = "<group>"; };
+		AA0217C41680887500B65231 /* PodcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastViewController.m; sourceTree = "<group>"; };
+		AA0217C51680887500B65231 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		AA0217C61680887500B65231 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		AA0217D71680890800B65231 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-chat.png"; sourceTree = "<group>"; };
+		AA0217D81680890800B65231 /* 31-ipod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "31-ipod.png"; sourceTree = "<group>"; };
+		AA0217D91680890800B65231 /* 70-tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "70-tv.png"; sourceTree = "<group>"; };
+		AA0217DA1680890800B65231 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		AA0217DB1680890800B65231 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		AA0217EA16808B2000B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NewsView_iPad.xib; sourceTree = "<group>"; };
+		AA0217EE16808B3900B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotosView_iPad.xib; sourceTree = "<group>"; };
+		AA0217F116808B4600B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotosView_iPhone.xib; sourceTree = "<group>"; };
+		AA0217F416808B4F00B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NewsView_iPhone.xib; sourceTree = "<group>"; };
+		AA0217F716808B5300B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PodcastView_iPad.xib; sourceTree = "<group>"; };
+		AA0217FA16808B5700B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PodcastView_iPhone.xib; sourceTree = "<group>"; };
+		AA0217FD16808B5A00B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/VideoView_iPad.xib; sourceTree = "<group>"; };
+		AA02180016808B6000B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/VideoView_iPhone.xib; sourceTree = "<group>"; };
+		AA02180316808B6700B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutView_iPhone.xib; sourceTree = "<group>"; };
+		AA02180616808B6A00B65231 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutView_iPad.xib; sourceTree = "<group>"; };
+		AA02180916808D0100B65231 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
+		AA02180A16808D0100B65231 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
 		AAF2B0DC167E84CF00B1C939 /* South Ridge App iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "South Ridge App iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF2B0E0167E84CF00B1C939 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAF2B0E2167E84CF00B1C939 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,10 +88,8 @@
 		AAF2B0F2167E84CF00B1C939 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AAF2B0F4167E84CF00B1C939 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AAF2B0F6167E84CF00B1C939 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AAF2B0F8167E84CF00B1C939 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AAF2B0F9167E84CF00B1C939 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AAF2B0FC167E84CF00B1C939 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		AAF2B0FF167E84CF00B1C939 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		AAF2B0F8167E84CF00B1C939 /* PhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		AAF2B0F9167E84CF00B1C939 /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		AAF2B108167E85DB00B1C939 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		AAF2B109167E85DB00B1C939 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		AAF2B10A167E85DB00B1C939 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -72,11 +109,6 @@
 		AAF2B118167E85DB00B1C939 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		AAF2B119167E85DB00B1C939 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		AAF2B11A167E85DB00B1C939 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		AAF2B126167E906500B1C939 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-chat.png"; sourceTree = "<group>"; };
-		AAF2B128167E906500B1C939 /* 31-ipod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "31-ipod.png"; sourceTree = "<group>"; };
-		AAF2B12A167E906500B1C939 /* 70-tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "70-tv.png"; sourceTree = "<group>"; };
-		AAF2B12C167E906500B1C939 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
-		AAF2B12E167E906500B1C939 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +125,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0217A51680826200B65231 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA0217EF16808B3900B65231 /* PhotosView_iPad.xib */,
+				AA0217F216808B4600B65231 /* PhotosView_iPhone.xib */,
+				AA0217EB16808B2000B65231 /* NewsView_iPad.xib */,
+				AA0217F516808B4F00B65231 /* NewsView_iPhone.xib */,
+				AA0217F816808B5300B65231 /* PodcastView_iPad.xib */,
+				AA0217FB16808B5700B65231 /* PodcastView_iPhone.xib */,
+				AA0217FE16808B5A00B65231 /* VideoView_iPad.xib */,
+				AA02180116808B6000B65231 /* VideoView_iPhone.xib */,
+				AA02180416808B6700B65231 /* AboutView_iPhone.xib */,
+				AA02180716808B6A00B65231 /* AboutView_iPad.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AA0217A61680827F00B65231 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA0217C11680887500B65231 /* NewsViewController.h */,
+				AA0217C21680887500B65231 /* NewsViewController.m */,
+				AA0217C31680887500B65231 /* PodcastViewController.h */,
+				AA0217C41680887500B65231 /* PodcastViewController.m */,
+				AA0217C51680887500B65231 /* VideoViewController.h */,
+				AA0217C61680887500B65231 /* VideoViewController.m */,
+				AAF2B0F8167E84CF00B1C939 /* PhotosViewController.h */,
+				AAF2B0F9167E84CF00B1C939 /* PhotosViewController.m */,
+				AA0217A1168079E500B65231 /* AboutViewController.h */,
+				AA0217A2168079E500B65231 /* AboutViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA0217D6168088D100B65231 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AA0217D71680890800B65231 /* 08-chat.png */,
+				AA0217D81680890800B65231 /* 31-ipod.png */,
+				AA0217D91680890800B65231 /* 70-tv.png */,
+				AA0217DA1680890800B65231 /* 86-camera.png */,
+				AA0217DB1680890800B65231 /* 112-group.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		AA02180816808C4600B65231 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				AA02180916808D0100B65231 /* iPad.png */,
+				AA02180A16808D0100B65231 /* iPhone.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		AAF2B0D1167E84CF00B1C939 = {
 			isa = PBXGroup;
 			children = (
@@ -123,14 +210,14 @@
 		AAF2B0E6167E84CF00B1C939 /* South Ridge App iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AA02180816808C4600B65231 /* Screenshots */,
+				AA0217D6168088D100B65231 /* Icons */,
+				AA0217A61680827F00B65231 /* ViewControllers */,
+				AA0217A51680826200B65231 /* UI */,
 				AAF2B124167E886C00B1C939 /* Shared */,
 				AAF2B106167E858D00B1C939 /* Libraries */,
 				AAF2B0EF167E84CF00B1C939 /* AppDelegate.h */,
 				AAF2B0F0167E84CF00B1C939 /* AppDelegate.m */,
-				AAF2B0F8167E84CF00B1C939 /* ViewController.h */,
-				AAF2B0F9167E84CF00B1C939 /* ViewController.m */,
-				AAF2B0FB167E84CF00B1C939 /* ViewController_iPhone.xib */,
-				AAF2B0FE167E84CF00B1C939 /* ViewController_iPad.xib */,
 				AAF2B0E7167E84CF00B1C939 /* Supporting Files */,
 			);
 			path = "South Ridge App iOS";
@@ -139,11 +226,6 @@
 		AAF2B0E7167E84CF00B1C939 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2B126167E906500B1C939 /* 08-chat.png */,
-				AAF2B128167E906500B1C939 /* 31-ipod.png */,
-				AAF2B12A167E906500B1C939 /* 70-tv.png */,
-				AAF2B12C167E906500B1C939 /* 86-camera.png */,
-				AAF2B12E167E906500B1C939 /* 112-group.png */,
 				AAF2B0E8167E84CF00B1C939 /* South Ridge App iOS-Info.plist */,
 				AAF2B0E9167E84CF00B1C939 /* InfoPlist.strings */,
 				AAF2B0EC167E84CF00B1C939 /* main.m */,
@@ -251,13 +333,23 @@
 				AAF2B0F3167E84CF00B1C939 /* Default.png in Resources */,
 				AAF2B0F5167E84CF00B1C939 /* Default@2x.png in Resources */,
 				AAF2B0F7167E84CF00B1C939 /* Default-568h@2x.png in Resources */,
-				AAF2B0FD167E84CF00B1C939 /* ViewController_iPhone.xib in Resources */,
-				AAF2B100167E84CF00B1C939 /* ViewController_iPad.xib in Resources */,
-				AAF2B130167E906500B1C939 /* 08-chat.png in Resources */,
-				AAF2B132167E906500B1C939 /* 31-ipod.png in Resources */,
-				AAF2B134167E906500B1C939 /* 70-tv.png in Resources */,
-				AAF2B136167E906500B1C939 /* 86-camera.png in Resources */,
-				AAF2B138167E906500B1C939 /* 112-group.png in Resources */,
+				AA02180216808B6700B65231 /* AboutView_iPhone.xib in Resources */,
+				AA02180516808B6A00B65231 /* AboutView_iPad.xib in Resources */,
+				AA0217E916808B2000B65231 /* NewsView_iPad.xib in Resources */,
+				AA0217F316808B4F00B65231 /* NewsView_iPhone.xib in Resources */,
+				AA0217F616808B5300B65231 /* PodcastView_iPad.xib in Resources */,
+				AA0217F916808B5700B65231 /* PodcastView_iPhone.xib in Resources */,
+				AA0217FC16808B5A00B65231 /* VideoView_iPad.xib in Resources */,
+				AA0217FF16808B6000B65231 /* VideoView_iPhone.xib in Resources */,
+				AA0217DC1680890800B65231 /* 08-chat.png in Resources */,
+				AA0217DD1680890800B65231 /* 31-ipod.png in Resources */,
+				AA0217DE1680890800B65231 /* 70-tv.png in Resources */,
+				AA0217DF1680890800B65231 /* 86-camera.png in Resources */,
+				AA0217E01680890800B65231 /* 112-group.png in Resources */,
+				AA0217ED16808B3900B65231 /* PhotosView_iPad.xib in Resources */,
+				AA0217F016808B4600B65231 /* PhotosView_iPhone.xib in Resources */,
+				AA02180B16808D0100B65231 /* iPad.png in Resources */,
+				AA02180C16808D0100B65231 /* iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +362,7 @@
 			files = (
 				AAF2B0ED167E84CF00B1C939 /* main.m in Sources */,
 				AAF2B0F1167E84CF00B1C939 /* AppDelegate.m in Sources */,
-				AAF2B0FA167E84CF00B1C939 /* ViewController.m in Sources */,
+				AAF2B0FA167E84CF00B1C939 /* PhotosViewController.m in Sources */,
 				AAF2B11B167E85DB00B1C939 /* AFHTTPClient.m in Sources */,
 				AAF2B11C167E85DB00B1C939 /* AFHTTPRequestOperation.m in Sources */,
 				AAF2B11D167E85DB00B1C939 /* AFImageRequestOperation.m in Sources */,
@@ -280,34 +372,102 @@
 				AAF2B121167E85DB00B1C939 /* AFURLConnectionOperation.m in Sources */,
 				AAF2B122167E85DB00B1C939 /* AFXMLRequestOperation.m in Sources */,
 				AAF2B123167E85DB00B1C939 /* UIImageView+AFNetworking.m in Sources */,
+				AA0217A3168079E500B65231 /* AboutViewController.m in Sources */,
+				AA0217C71680887500B65231 /* NewsViewController.m in Sources */,
+				AA0217C81680887500B65231 /* PodcastViewController.m in Sources */,
+				AA0217C91680887500B65231 /* VideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AA0217EB16808B2000B65231 /* NewsView_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217EA16808B2000B65231 /* en */,
+			);
+			name = NewsView_iPad.xib;
+			sourceTree = "<group>";
+		};
+		AA0217EF16808B3900B65231 /* PhotosView_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217EE16808B3900B65231 /* en */,
+			);
+			name = PhotosView_iPad.xib;
+			sourceTree = "<group>";
+		};
+		AA0217F216808B4600B65231 /* PhotosView_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217F116808B4600B65231 /* en */,
+			);
+			name = PhotosView_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AA0217F516808B4F00B65231 /* NewsView_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217F416808B4F00B65231 /* en */,
+			);
+			name = NewsView_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AA0217F816808B5300B65231 /* PodcastView_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217F716808B5300B65231 /* en */,
+			);
+			name = PodcastView_iPad.xib;
+			sourceTree = "<group>";
+		};
+		AA0217FB16808B5700B65231 /* PodcastView_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217FA16808B5700B65231 /* en */,
+			);
+			name = PodcastView_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AA0217FE16808B5A00B65231 /* VideoView_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0217FD16808B5A00B65231 /* en */,
+			);
+			name = VideoView_iPad.xib;
+			sourceTree = "<group>";
+		};
+		AA02180116808B6000B65231 /* VideoView_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA02180016808B6000B65231 /* en */,
+			);
+			name = VideoView_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AA02180416808B6700B65231 /* AboutView_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA02180316808B6700B65231 /* en */,
+			);
+			name = AboutView_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AA02180716808B6A00B65231 /* AboutView_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA02180616808B6A00B65231 /* en */,
+			);
+			name = AboutView_iPad.xib;
+			sourceTree = "<group>";
+		};
 		AAF2B0E9167E84CF00B1C939 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AAF2B0EA167E84CF00B1C939 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AAF2B0FB167E84CF00B1C939 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAF2B0FC167E84CF00B1C939 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		AAF2B0FE167E84CF00B1C939 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAF2B0FF167E84CF00B1C939 /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -406,6 +566,7 @@
 				AAF2B105167E84CF00B1C939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
