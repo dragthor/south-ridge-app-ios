@@ -1,7 +1,7 @@
 south-ridge-app-ios
 ===================
 
-South Ridge Community Church (Clinton, NJ) native iOS application.  The mission of South Ridge is to embrace God's grace and extend His love.
+South Ridge Community Church (Clinton, NJ) native mobile iOS application.  The mission of South Ridge is to embrace God's grace and extend His love.
 
 http://www.southridgecc.org
 
