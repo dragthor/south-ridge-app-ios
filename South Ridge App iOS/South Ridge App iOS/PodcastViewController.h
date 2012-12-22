@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PodcastViewController : UIViewController
+@interface PodcastViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    NSArray *podcasts;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *podcastTable;
 
 @end

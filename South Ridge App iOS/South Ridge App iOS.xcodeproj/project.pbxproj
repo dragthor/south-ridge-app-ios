@@ -10,6 +10,7 @@
 		AA9CA8C216853FE500B2F220 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9CA8C116853FE500B2F220 /* AboutViewController.m */; };
 		AA9CA8C51685401C00B2F220 /* AboutViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9CA8C41685401C00B2F220 /* AboutViewController_iPad.xib */; };
 		AA9CA8C71685403300B2F220 /* AboutViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9CA8C61685403300B2F220 /* AboutViewController_iPhone.xib */; };
+		AAC23781168624A100B84050 /* podcast.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC23780168624A100B84050 /* podcast.png */; };
 		AAC7E6D21685390B00F44CCB /* NewsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */; };
 		AAC7E6D51685394700F44CCB /* NewsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */; };
 		AAC7E6D81685397300F44CCB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E6D71685397300F44CCB /* NewsViewController.m */; };
@@ -52,6 +53,7 @@
 		AA9CA8C116853FE500B2F220 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		AA9CA8C41685401C00B2F220 /* AboutViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController_iPad.xib; sourceTree = "<group>"; };
 		AA9CA8C61685403300B2F220 /* AboutViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController_iPhone.xib; sourceTree = "<group>"; };
+		AAC23780168624A100B84050 /* podcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podcast.png; sourceTree = "<group>"; };
 		AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPhone.xib; sourceTree = "<group>"; };
 		AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPad.xib; sourceTree = "<group>"; };
 		AAC7E6D61685397300F44CCB /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAC2377E1686246500B84050 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AAC23780168624A100B84050 /* podcast.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		AACDEBC6168472AA0016B2EA = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		AACDEBDB168472AA0016B2EA /* South Ridge App iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AAC2377E1686246500B84050 /* Images */,
 				AACDEC171684743E0016B2EA /* Libraries */,
 				AACDEC0C1684732D0016B2EA /* Icons */,
 				AACDEBE4168472AA0016B2EA /* AppDelegate.h */,
@@ -310,6 +321,7 @@
 				AAC7E6D51685394700F44CCB /* NewsViewController_iPad.xib in Resources */,
 				AA9CA8C51685401C00B2F220 /* AboutViewController_iPad.xib in Resources */,
 				AA9CA8C71685403300B2F220 /* AboutViewController_iPhone.xib in Resources */,
+				AAC23781168624A100B84050 /* podcast.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
