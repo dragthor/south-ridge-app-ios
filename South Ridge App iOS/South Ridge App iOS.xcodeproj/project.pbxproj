@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA94E7671686559800C7C968 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA94E7661686559800C7C968 /* logo.png */; };
+		AA94E76B1686615000C7C968 /* video-100x75.png in Resources */ = {isa = PBXBuildFile; fileRef = AA94E7691686615000C7C968 /* video-100x75.png */; };
+		AA94E76C1686615000C7C968 /* video-200x150.png in Resources */ = {isa = PBXBuildFile; fileRef = AA94E76A1686615000C7C968 /* video-200x150.png */; };
 		AA9CA8C216853FE500B2F220 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9CA8C116853FE500B2F220 /* AboutViewController.m */; };
 		AA9CA8C51685401C00B2F220 /* AboutViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9CA8C41685401C00B2F220 /* AboutViewController_iPad.xib */; };
 		AA9CA8C71685403300B2F220 /* AboutViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9CA8C61685403300B2F220 /* AboutViewController_iPhone.xib */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		AA94E7661686559800C7C968 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		AA94E7691686615000C7C968 /* video-100x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-100x75.png"; sourceTree = "<group>"; };
+		AA94E76A1686615000C7C968 /* video-200x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-200x150.png"; sourceTree = "<group>"; };
 		AA9CA8C016853FE500B2F220 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		AA9CA8C116853FE500B2F220 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		AA9CA8C41685401C00B2F220 /* AboutViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController_iPad.xib; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 		AAC2377E1686246500B84050 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AA94E7691686615000C7C968 /* video-100x75.png */,
+				AA94E76A1686615000C7C968 /* video-200x150.png */,
 				AA94E7661686559800C7C968 /* logo.png */,
 				AAC23780168624A100B84050 /* podcast.png */,
 			);
@@ -326,6 +332,8 @@
 				AA9CA8C71685403300B2F220 /* AboutViewController_iPhone.xib in Resources */,
 				AAC23781168624A100B84050 /* podcast.png in Resources */,
 				AA94E7671686559800C7C968 /* logo.png in Resources */,
+				AA94E76B1686615000C7C968 /* video-100x75.png in Resources */,
+				AA94E76C1686615000C7C968 /* video-200x150.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

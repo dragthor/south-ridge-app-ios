@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VideoViewController : UIViewController
+@interface VideoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    NSArray *videos;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *videoTable;
 
 @end

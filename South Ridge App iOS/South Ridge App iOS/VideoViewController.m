@@ -7,6 +7,7 @@
 //
 
 #import "VideoViewController.h"
+#import "AFNetworking.h"
 
 @interface VideoViewController ()
 
@@ -29,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self populateVideos];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,4 +39,65 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *cellIdentifier = @"cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == Nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    
+    NSDictionary *item = [videos objectAtIndex:indexPath.row];
+    
+    NSString *videoUrl = [item valueForKey:@"mobile_url"];
+    
+    cell.textLabel.text = [item valueForKey:@"title"];
+    cell.detailTextLabel.text = [item valueForKey:@"description"];;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        // 100 x 75
+        NSString *imageUrl = [item valueForKey:@"thumbnail_small"];
+    
+        [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"video-100x75.png"]];
+    } else {
+        // 200 x 150
+        NSString *imageUrl = [item valueForKey:@"thumbnail_medium"];
+        
+        [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"video-200x150.png"]];
+    }
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return videos.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(void) populateVideos {
+    NSURL *url = [NSURL URLWithString:@"http://vimeo.com/api/v2/benstapley/videos.json"];
+    
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation;
+    
+    operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        videos = JSON;
+        
+        NSLog(@"videos found %d", videos.count);
+        
+        [_videoTable reloadData];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"video failure. statuscode is %d", response.statusCode);
+        NSLog(@"error - %@", error);
+    }];
+    
+    [operation start];
+}
 @end
