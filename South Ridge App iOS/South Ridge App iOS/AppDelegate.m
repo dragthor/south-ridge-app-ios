@@ -2,17 +2,17 @@
 //  AppDelegate.m
 //  South Ridge App iOS
 //
-//  Created by Kris Krause on 12/16/12.
+//  Created by Kris Krause on 12/21/12.
 //  Copyright (c) 2012 Kris Krause. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
-#import "PhotosViewController.h"
-#import "AboutViewController.h"
+#import "PhotoViewController.h"
 #import "PodcastViewController.h"
-#import "NewsViewController.h"
 #import "VideoViewController.h"
+#import "NewsViewController.h"
+#import "AboutViewController.h"
 
 @implementation AppDelegate
 
@@ -20,47 +20,26 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UITabBarController *tbc = [[UITabBarController alloc] init];
-    
-    AboutViewController *about;
-    PhotosViewController *photos;
-    PodcastViewController *podcasts;
-    VideoViewController *videos;
-    NewsViewController *news;
-    
     // Override point for customization after application launch.
+    UIViewController *photoController, *podcastController, *videoController, *newsController, *aboutController;
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        about = [[AboutViewController alloc] initWithNibName:@"AboutView_iPhone" bundle:nil];
-        photos = [[PhotosViewController alloc] initWithNibName:@"PhotosView_iPhone" bundle:nil];
-        podcasts = [[PodcastViewController alloc] initWithNibName:@"PodcastView_iPhone" bundle:nil];
-        videos = [[VideoViewController alloc] initWithNibName:@"VideoView_iPhone" bundle:nil];
-        news = [[NewsViewController alloc] initWithNibName:@"NewsView_iPhone" bundle:nil];
+        photoController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController_iPhone" bundle:nil];
+        podcastController = [[PodcastViewController alloc] initWithNibName:@"PodcastViewController_iPhone" bundle:nil];
+        videoController = [[VideoViewController alloc] initWithNibName:@"VideoViewController_iPhone" bundle:nil];
+        newsController = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPhone" bundle:nil];
+        aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController_iPhone" bundle:nil];
     } else {
-        about = [[AboutViewController alloc] initWithNibName:@"AboutView_iPad" bundle:nil];
-        photos = [[PhotosViewController alloc] initWithNibName:@"PhotosView_iPad" bundle:nil];
-        podcasts = [[PodcastViewController alloc] initWithNibName:@"PodcastView_iPad" bundle:nil];
-        videos = [[VideoViewController alloc] initWithNibName:@"VideoView_iPad" bundle:nil];
-        news = [[NewsViewController alloc] initWithNibName:@"NewsView_iPad" bundle:nil];
+        photoController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController_iPad" bundle:nil];
+        podcastController = [[PodcastViewController alloc] initWithNibName:@"PodcastViewController_iPad" bundle:nil];
+        videoController = [[VideoViewController alloc] initWithNibName:@"VideoViewController_iPad" bundle:nil];
+        newsController = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPad" bundle:nil];
+        aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController_iPad" bundle:nil];
     }
     
-    about.tabBarItem.title = @"About Us";
-    about.tabBarItem.image = [UIImage imageNamed:@"112-group.png"];
-    
-    photos.tabBarItem.title = @"Photos";
-    photos.tabBarItem.image = [UIImage imageNamed:@"86-camera.png"];
-    
-    podcasts.tabBarItem.title = @"Podcasts";
-    podcasts.tabBarItem.image = [UIImage imageNamed:@"31-ipod.png"];
-    
-    videos.tabBarItem.title = @"Videos";
-    videos.tabBarItem.image = [UIImage imageNamed:@"70-tv.png"];
-    
-    news.tabBarItem.title = @"eNews";
-    news.tabBarItem.image = [UIImage imageNamed:@"08-chat.png"];
-    
-    [tbc setViewControllers:[NSArray arrayWithObjects:photos, podcasts, videos, news, about, nil]];
-    
-    self.window.rootViewController = tbc;
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[photoController, podcastController, videoController, newsController, aboutController];
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -91,5 +70,19 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+/*
+// Optional UITabBarControllerDelegate method.
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+}
+*/
+
+/*
+// Optional UITabBarControllerDelegate method.
+- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+{
+}
+*/
 
 @end

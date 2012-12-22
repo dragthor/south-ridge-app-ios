@@ -1,18 +1,18 @@
 //
-//  NewsViewController.m
+//  VideoViewController_iPhone.m
 //  South Ridge App iOS
 //
-//  Created by Kris Krause on 12/18/12.
+//  Created by Kris Krause on 12/21/12.
 //  Copyright (c) 2012 Kris Krause. All rights reserved.
 //
 
-#import "NewsViewController.h"
+#import "VideoViewController_iPhone.h"
 
-@interface NewsViewController ()
+@interface VideoViewController_iPhone ()
 
 @end
 
-@implementation NewsViewController
+@implementation VideoViewController_iPhone
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning

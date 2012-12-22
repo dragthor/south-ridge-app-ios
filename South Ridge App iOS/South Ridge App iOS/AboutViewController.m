@@ -1,24 +1,25 @@
 //
-//  VideoViewController.m
+//  AboutViewController.m
 //  South Ridge App iOS
 //
-//  Created by Kris Krause on 12/18/12.
+//  Created by Kris Krause on 12/21/12.
 //  Copyright (c) 2012 Kris Krause. All rights reserved.
 //
 
-#import "VideoViewController.h"
+#import "AboutViewController.h"
 
-@interface VideoViewController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation VideoViewController
+@implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.tabBarItem.title = @"About Us";
+        self.tabBarItem.image = [UIImage imageNamed:@"112-group.png"];
     }
     return self;
 }

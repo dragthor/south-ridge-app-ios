@@ -2,7 +2,7 @@
 //  main.m
 //  South Ridge App iOS
 //
-//  Created by Kris Krause on 12/16/12.
+//  Created by Kris Krause on 12/21/12.
 //  Copyright (c) 2012 Kris Krause. All rights reserved.
 //
 

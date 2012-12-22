@@ -1,8 +1,8 @@
 //
-//  PodcastViewController.m
+//  SecondViewController.m
 //  South Ridge App iOS
 //
-//  Created by Kris Krause on 12/18/12.
+//  Created by Kris Krause on 12/21/12.
 //  Copyright (c) 2012 Kris Krause. All rights reserved.
 //
 
@@ -18,15 +18,16 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.tabBarItem.title = @"Podcast";
+        self.tabBarItem.image = [UIImage imageNamed:@"31-ipod.png"];
     }
     return self;
 }
-
+							
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning

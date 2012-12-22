@@ -1,13 +1,13 @@
 //
-//  AboutViewController.h
+//  VideoViewController.h
 //  South Ridge App iOS
 //
-//  Created by Kris Krause on 12/18/12.
+//  Created by Kris Krause on 12/21/12.
 //  Copyright (c) 2012 Kris Krause. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UIViewController
+@interface VideoViewController : UIViewController
 
 @end
