@@ -7,6 +7,7 @@
 //
 
 #import "PhotoViewController.h"
+#import "AFNetworking.h"
 
 @interface PhotoViewController ()
 
@@ -29,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self populateAlbums];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,4 +39,65 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *cellIdentifier = @"cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == Nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    
+    NSDictionary *item = [albums objectAtIndex:indexPath.row];
+    
+    NSInteger count = [[item objectForKey:@"count"] intValue];
+    
+    NSString *subText = [NSString stringWithFormat:@"%d photos. ", count];
+   
+    NSString *coverPhoto = [item valueForKey:@"cover_photo"];
+
+    NSString *desc = [item valueForKey:@"description"];
+    
+    if (desc != NULL) subText = [subText stringByAppendingString:desc];
+    
+    NSString *imageUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@", coverPhoto];
+
+    cell.textLabel.text = [item valueForKey:@"name"];
+    cell.detailTextLabel.text = subText;
+    
+    return cell;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return albums.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(void) populateAlbums {
+    NSURL *url = [NSURL URLWithString:@"http://graph.facebook.com/southridgecommunitychurch/albums/"];
+    
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation;
+    
+    operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        albums = [JSON objectForKey:@"data"];
+        
+        NSLog(@"albums found %d", albums.count);
+        
+        [_albumTable reloadData];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"albums failure. statuscode is %d", response.statusCode);
+        NSLog(@"error - %@", error);
+    }];
+    
+    [operation start];
+}
 @end

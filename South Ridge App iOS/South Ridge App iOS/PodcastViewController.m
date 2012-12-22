@@ -60,8 +60,7 @@
     cell.textLabel.text = [item valueForKey:@"Title"];
     cell.detailTextLabel.text = subText;
     
-    NSString *imageUrl = @"http://www.southridgecc.org/resources/images/";
-    imageUrl = [imageUrl stringByAppendingString:[item valueForKey:@"Image"]];
+    NSString *imageUrl = [NSString stringWithFormat:@"http://www.southridgecc.org/resources/images/%@", [item valueForKey:@"Image"]];
     
     [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"podcast.png"]];
     

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoViewController : UIViewController
+@interface PhotoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    NSArray *albums;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *albumTable;
 
 @end
