@@ -49,6 +49,9 @@
 		AACDEC43168475880016B2EA /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AACDEC42168475880016B2EA /* VideoViewController.m */; };
 		AACDEC45168475A30016B2EA /* VideoViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AACDEC44168475A30016B2EA /* VideoViewController_iPad.xib */; };
 		AACDEC47168475B80016B2EA /* VideoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AACDEC46168475B80016B2EA /* VideoViewController_iPhone.xib */; };
+		AAD755BE168720BC00DCC52F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAD755BB168720BC00DCC52F /* SVProgressHUD.bundle */; };
+		AAD755BF168720BC00DCC52F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD755BD168720BC00DCC52F /* SVProgressHUD.m */; };
+		AAD755C2168722E900DCC52F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD755C1168722E900DCC52F /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,10 @@
 		AACDEC42168475880016B2EA /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		AACDEC44168475A30016B2EA /* VideoViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController_iPad.xib; sourceTree = "<group>"; };
 		AACDEC46168475B80016B2EA /* VideoViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController_iPhone.xib; sourceTree = "<group>"; };
+		AAD755BB168720BC00DCC52F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		AAD755BC168720BC00DCC52F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		AAD755BD168720BC00DCC52F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		AAD755C1168722E900DCC52F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD755C2168722E900DCC52F /* QuartzCore.framework in Frameworks */,
 				AACDEBD6168472AA0016B2EA /* UIKit.framework in Frameworks */,
 				AACDEBD8168472AA0016B2EA /* Foundation.framework in Frameworks */,
 				AACDEBDA168472AA0016B2EA /* CoreGraphics.framework in Frameworks */,
@@ -160,6 +168,7 @@
 		AACDEBD4168472AA0016B2EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAD755C1168722E900DCC52F /* QuartzCore.framework */,
 				AACDEBD5168472AA0016B2EA /* UIKit.framework */,
 				AACDEBD7168472AA0016B2EA /* Foundation.framework */,
 				AACDEBD9168472AA0016B2EA /* CoreGraphics.framework */,
@@ -229,6 +238,7 @@
 		AACDEC171684743E0016B2EA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				AAD755BA168720BC00DCC52F /* SVProgressHUD */,
 				AACDEC18168474540016B2EA /* AFNetworking */,
 			);
 			path = Libraries;
@@ -258,6 +268,16 @@
 				AACDEC2B168474540016B2EA /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		AAD755BA168720BC00DCC52F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				AAD755BB168720BC00DCC52F /* SVProgressHUD.bundle */,
+				AAD755BC168720BC00DCC52F /* SVProgressHUD.h */,
+				AAD755BD168720BC00DCC52F /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +354,7 @@
 				AA94E7671686559800C7C968 /* logo.png in Resources */,
 				AA94E76B1686615000C7C968 /* video-100x75.png in Resources */,
 				AA94E76C1686615000C7C968 /* video-200x150.png in Resources */,
+				AAD755BE168720BC00DCC52F /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +381,7 @@
 				AACDEC43168475880016B2EA /* VideoViewController.m in Sources */,
 				AAC7E6D81685397300F44CCB /* NewsViewController.m in Sources */,
 				AA9CA8C216853FE500B2F220 /* AboutViewController.m in Sources */,
+				AAD755BF168720BC00DCC52F /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

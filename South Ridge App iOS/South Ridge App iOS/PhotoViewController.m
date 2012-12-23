@@ -8,6 +8,7 @@
 
 #import "PhotoViewController.h"
 #import "AFNetworking.h"
+#import "SVProgressHUD.h"
 
 @interface PhotoViewController ()
 
@@ -61,7 +62,7 @@
     
     if (desc != NULL) subText = [subText stringByAppendingString:desc];
     
-    NSString *imageUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@", coverPhoto];
+    // NSString *imageUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@", coverPhoto];
 
     cell.textLabel.text = [item valueForKey:@"name"];
     cell.detailTextLabel.text = subText;
@@ -79,6 +80,8 @@
 }
 
 -(void) populateAlbums {
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     NSURL *url = [NSURL URLWithString:@"http://graph.facebook.com/southridgecommunitychurch/albums/"];
     
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
@@ -89,13 +92,11 @@
         
         albums = [JSON objectForKey:@"data"];
         
-        NSLog(@"albums found %d", albums.count);
-        
         [_albumTable reloadData];
         
+        [SVProgressHUD dismiss];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"albums failure. statuscode is %d", response.statusCode);
-        NSLog(@"error - %@", error);
+        [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
     }];
     
     [operation start];

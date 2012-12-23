@@ -8,6 +8,7 @@
 
 #import "VideoViewController.h"
 #import "AFNetworking.h"
+#import "SVProgressHUD.h"
 
 @interface VideoViewController ()
 
@@ -79,6 +80,8 @@
 }
 
 -(void) populateVideos {
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     NSURL *url = [NSURL URLWithString:@"http://vimeo.com/api/v2/benstapley/videos.json"];
     
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
@@ -88,14 +91,12 @@
     operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
         videos = JSON;
-        
-        NSLog(@"videos found %d", videos.count);
-        
+
         [_videoTable reloadData];
         
+        [SVProgressHUD dismiss];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"video failure. statuscode is %d", response.statusCode);
-        NSLog(@"error - %@", error);
+        [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
     }];
     
     [operation start];

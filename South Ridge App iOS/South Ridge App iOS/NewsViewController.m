@@ -7,6 +7,7 @@
 //
 
 #import "NewsViewController.h"
+#import "SVProgressHUD.h"
 
 @interface NewsViewController ()
 

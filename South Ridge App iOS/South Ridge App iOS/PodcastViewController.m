@@ -8,6 +8,7 @@
 
 #import "PodcastViewController.h"
 #import "AFNetworking.h"
+#import "SVProgressHUD.h"
 
 @interface PodcastViewController ()
 
@@ -76,6 +77,8 @@
 }
 
 -(void) populatePodcasts {
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     NSURL *url = [NSURL URLWithString:@"http://dragthor.github.com/southridge/SouthRidgePodcast.json"];
     
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
@@ -86,13 +89,11 @@
         
         podcasts = JSON;
         
-        NSLog(@"podcasts found %d", podcasts.count);
-        
         [_podcastTable reloadData];
         
+        [SVProgressHUD dismiss];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"podcast failure. statuscode is %d", response.statusCode);
-        NSLog(@"error - %@", error);
+        [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
     }];
     
     [operation start];
