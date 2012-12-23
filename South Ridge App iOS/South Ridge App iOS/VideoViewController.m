@@ -90,8 +90,23 @@
     
     operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
-        videos = JSON;
+        NSArray *rawVideos = JSON;
 
+        videos = [[NSMutableArray alloc] init];
+        
+        for (NSObject* video in rawVideos)
+        {
+            NSString *rawTags = [video valueForKey:@"tags"];
+            NSArray *tags = [rawTags componentsSeparatedByString:@","];
+            
+            for (NSString* tag in tags) {
+                if ([[[tag lowercaseString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ] isEqualToString:@"south ridge community church"]) {
+                    [videos addObject:video];
+                    break;
+                }
+            }
+        }
+        
         [_videoTable reloadData];
         
         [SVProgressHUD dismiss];
