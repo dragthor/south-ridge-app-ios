@@ -26,7 +26,7 @@
 		AAABF6BB1688B06200F2C707 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6B41688B06200F2C707 /* Default-Portrait~ipad.png */; };
 		AAABF6BC1688B06200F2C707 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6B51688B06200F2C707 /* Default.png */; };
 		AAABF6BD1688B06200F2C707 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6B61688B06200F2C707 /* Default@2x.png */; };
-		AAC23781168624A100B84050 /* podcast.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC23780168624A100B84050 /* podcast.png */; };
+		AAABF6C31688B56D00F2C707 /* podcast-700x525.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C21688B56D00F2C707 /* podcast-700x525.png */; };
 		AAC7E6D21685390B00F44CCB /* NewsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */; };
 		AAC7E6D51685394700F44CCB /* NewsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */; };
 		AAC7E6D81685397300F44CCB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E6D71685397300F44CCB /* NewsViewController.m */; };
@@ -85,7 +85,7 @@
 		AAABF6B41688B06200F2C707 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		AAABF6B51688B06200F2C707 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AAABF6B61688B06200F2C707 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AAC23780168624A100B84050 /* podcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podcast.png; sourceTree = "<group>"; };
+		AAABF6C21688B56D00F2C707 /* podcast-700x525.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podcast-700x525.png"; sourceTree = "<group>"; };
 		AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPhone.xib; sourceTree = "<group>"; };
 		AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPad.xib; sourceTree = "<group>"; };
 		AAC7E6D61685397300F44CCB /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
@@ -187,10 +187,10 @@
 		AAC2377E1686246500B84050 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AAABF6C21688B56D00F2C707 /* podcast-700x525.png */,
 				AA94E7691686615000C7C968 /* video-100x75.png */,
 				AA94E76A1686615000C7C968 /* video-200x150.png */,
 				AA94E7661686559800C7C968 /* logo.png */,
-				AAC23780168624A100B84050 /* podcast.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -393,7 +393,6 @@
 				AAC7E6D51685394700F44CCB /* NewsViewController_iPad.xib in Resources */,
 				AA9CA8C51685401C00B2F220 /* AboutViewController_iPad.xib in Resources */,
 				AA9CA8C71685403300B2F220 /* AboutViewController_iPhone.xib in Resources */,
-				AAC23781168624A100B84050 /* podcast.png in Resources */,
 				AA94E7671686559800C7C968 /* logo.png in Resources */,
 				AA94E76B1686615000C7C968 /* video-100x75.png in Resources */,
 				AA94E76C1686615000C7C968 /* video-200x150.png in Resources */,
@@ -411,6 +410,7 @@
 				AAABF6BB1688B06200F2C707 /* Default-Portrait~ipad.png in Resources */,
 				AAABF6BC1688B06200F2C707 /* Default.png in Resources */,
 				AAABF6BD1688B06200F2C707 /* Default@2x.png in Resources */,
+				AAABF6C31688B56D00F2C707 /* podcast-700x525.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

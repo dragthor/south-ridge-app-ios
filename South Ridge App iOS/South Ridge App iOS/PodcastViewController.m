@@ -63,7 +63,7 @@
     
     NSString *imageUrl = [NSString stringWithFormat:@"http://www.southridgecc.org/resources/images/%@", [item valueForKey:@"Image"]];
     
-    [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"podcast.png"]];
+    [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"podcast-700x525.png"]];
     
     return cell;
 }
