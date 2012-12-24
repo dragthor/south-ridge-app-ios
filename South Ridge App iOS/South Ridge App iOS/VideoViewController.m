@@ -9,6 +9,7 @@
 #import "VideoViewController.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "ImageHelper.h"
 
 @interface VideoViewController ()
 
@@ -52,22 +53,24 @@
     
     NSDictionary *item = [videos objectAtIndex:indexPath.row];
     
-    NSString *videoUrl = [item valueForKey:@"mobile_url"];
+    // NSString *videoUrl = [item valueForKey:@"mobile_url"];
     
     cell.textLabel.text = [item valueForKey:@"title"];
     cell.detailTextLabel.text = [item valueForKey:@"description"];;
+    cell.imageView.image = [UIImage imageNamed:@"thumb-100x80.png"];
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        // 100 x 75
-        NSString *imageUrl = [item valueForKey:@"thumbnail_small"];
+    NSString *imageUrl = [item valueForKey:@"thumbnail_medium"];
     
-        [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"video-100x75.png"]];
-    } else {
-        // 200 x 150
-        NSString *imageUrl = [item valueForKey:@"thumbnail_medium"];
+    NSURLRequest *podReq = [NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]];
+    
+    [cell.imageView setImageWithURLRequest: podReq placeholderImage:[UIImage imageNamed:@"thumb-100x80.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         
-        [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"video-200x150.png"]];
-    }
+        cell.imageView.image = [ImageHelper imageWithImage:image scaledToSize:CGSizeMake(100, 80)];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        //
+    }];
+    
     return cell;
 }
 

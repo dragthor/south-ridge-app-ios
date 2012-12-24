@@ -9,6 +9,7 @@
 #import "PhotoViewController.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "ImageHelper.h"
 
 @interface PhotoViewController ()
 
@@ -62,10 +63,39 @@
     
     if (desc != NULL) subText = [subText stringByAppendingString:desc];
     
-    // NSString *imageUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@", coverPhoto];
-
     cell.textLabel.text = [item valueForKey:@"name"];
     cell.detailTextLabel.text = subText;
+    cell.imageView.image = [UIImage imageNamed:@"thumb-100x80.png"];
+    
+    NSString *imageUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@", coverPhoto];
+
+    // Begin getting album cover photo.
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation;
+    
+    operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:req success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        NSDictionary *coverPhotos = JSON;
+        
+        NSString *coverPhotoUrl = [coverPhotos valueForKey:@"picture"];
+         
+        NSURLRequest *coverReq = [NSURLRequest requestWithURL:[NSURL URLWithString:coverPhotoUrl]];
+        
+        [cell.imageView setImageWithURLRequest: coverReq placeholderImage:[UIImage imageNamed:@"thumb-100x80.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            
+            cell.imageView.image = [ImageHelper imageWithImage:image scaledToSize:CGSizeMake(100, 80)];
+            
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+            //
+        }];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+    }];
+    
+    [operation start];
     
     return cell;
 }
@@ -100,15 +130,5 @@
     }];
     
     [operation start];
-}
-
--(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
-{
-    UIGraphicsBeginImageContext( newSize );
-    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
-    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
 }
 @end

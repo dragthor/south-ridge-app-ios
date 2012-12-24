@@ -9,6 +9,7 @@
 #import "PodcastViewController.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "ImageHelper.h"
 
 @interface PodcastViewController ()
 
@@ -60,10 +61,19 @@
     
     cell.textLabel.text = [item valueForKey:@"Title"];
     cell.detailTextLabel.text = subText;
+    cell.imageView.image = [UIImage imageNamed:@"thumb-100x80.png"];
     
     NSString *imageUrl = [NSString stringWithFormat:@"http://www.southridgecc.org/resources/images/%@", [item valueForKey:@"Image"]];
+
+    NSURLRequest *podReq = [NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]];
     
-    [cell.imageView setImageWithURL: [NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"podcast-700x525.png"]];
+    [cell.imageView setImageWithURLRequest: podReq placeholderImage:[UIImage imageNamed:@"thumb-100x80.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        
+        cell.imageView.image = [ImageHelper imageWithImage:image scaledToSize:CGSizeMake(100, 80)];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        //
+    }];
     
     return cell;
 }
