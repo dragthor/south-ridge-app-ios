@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
+#import "AlbumViewController.h"
 
 @interface PhotoViewController ()
 
@@ -107,6 +108,30 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSDictionary *item = [albums objectAtIndex:indexPath.row];
+    
+    // NSString *albumId = [item valueForKey:@"id"];
+    
+    /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Album" message: albumId delegate: self cancelButtonTitle: @"Close" otherButtonTitles: nil];
+    
+	[alert show]; */
+
+    AlbumViewController *album;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        album = [[AlbumViewController alloc] initWithNibName:@"AlbumViewController_iPhone" bundle:nil];
+    } else {
+        album = [[AlbumViewController alloc] initWithNibName:@"AlbumViewController_iPad" bundle:nil];
+    }
+    
+    [self presentViewController:album animated:YES completion:^{
+        // Done showing callback.
+    }];
 }
 
 -(void) populateAlbums {
