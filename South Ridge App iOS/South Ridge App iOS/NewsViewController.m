@@ -56,15 +56,21 @@
         NSString *date = [[news objectAtIndex:0] valueForKey:@"Date"];
         NSString *message = [[news objectAtIndex:0] valueForKey:@"Message"];
         
-        message = [message stringByReplacingOccurrencesOfString:@"</p><p>" withString:@"\n\n"];
-        message = [message stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
-        message = [message stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
-       
-        message = [self stringByStrippingHTML:message];
+        NSString *enews = [author stringByAppendingString:@" "];
         
-        self.newsLabel.text = message;
-        self.authorLabel.text = author;
-        self.dateLabel.text = date;
+        enews = [enews stringByAppendingString:date];
+        
+        enews = [enews stringByAppendingString:@"\n\n"];
+        
+        enews = [enews stringByAppendingString:message];
+    
+        enews = [enews stringByReplacingOccurrencesOfString:@"</p><p>" withString:@"\n\n"];
+        enews = [enews stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
+        enews = [enews stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+       
+        enews = [self stringByStrippingHTML:enews];
+        
+        self.newsLabel.text = enews;
         
         [SVProgressHUD dismiss];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {

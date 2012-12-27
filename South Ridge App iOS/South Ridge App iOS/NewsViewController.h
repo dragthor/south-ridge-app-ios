@@ -10,8 +10,6 @@
 
 @interface NewsViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UITextView *newsLabel;
 
 @end
