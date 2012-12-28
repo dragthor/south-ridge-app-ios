@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlbumViewController : UIViewController
+@interface AlbumViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
+    
+    NSArray *photos;
+}
 
 @property (weak, nonatomic) IBOutlet UICollectionView *albumCollection;
+@property (weak, nonatomic) NSString *albumNumber;
+@property (weak, nonatomic) NSString *albumName;
+@property (weak, nonatomic) IBOutlet UINavigationItem *albumTitle;
 
 -(IBAction) done;
 

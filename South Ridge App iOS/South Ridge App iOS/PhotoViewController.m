@@ -54,9 +54,7 @@
     
     NSDictionary *item = [albums objectAtIndex:indexPath.row];
     
-    NSInteger count = [[item objectForKey:@"count"] intValue];
-    
-    NSString *subText = [NSString stringWithFormat:@"%d photos. ", count];
+    NSString *subText = @"";
    
     NSString *coverPhoto = [item valueForKey:@"cover_photo"];
 
@@ -115,12 +113,9 @@
     
     NSDictionary *item = [albums objectAtIndex:indexPath.row];
     
-    // NSString *albumId = [item valueForKey:@"id"];
+    NSString *albumId = [item valueForKey:@"id"];
+    NSString *albumName = [item valueForKey:@"name"];
     
-    /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Album" message: albumId delegate: self cancelButtonTitle: @"Close" otherButtonTitles: nil];
-    
-	[alert show]; */
-
     AlbumViewController *album;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -128,6 +123,9 @@
     } else {
         album = [[AlbumViewController alloc] initWithNibName:@"AlbumViewController_iPad" bundle:nil];
     }
+    
+    album.albumNumber = albumId;
+    album.albumName = albumName;
     
     [self presentViewController:album animated:YES completion:^{
         // Done showing callback.

@@ -30,6 +30,7 @@
 		AAABF6C71688BE1F00F2C707 /* thumb-100x80.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C51688BE1F00F2C707 /* thumb-100x80.png */; };
 		AAABF6C81688BE1F00F2C707 /* thumb-200x160.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */; };
 		AAABF6CC1688BF1100F2C707 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAABF6CB1688BF1100F2C707 /* ImageHelper.m */; };
+		AAC47E65168DB0B2009A676C /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC47E64168DB0B2009A676C /* PhotoViewCell.m */; };
 		AAC7E6D21685390B00F44CCB /* NewsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */; };
 		AAC7E6D51685394700F44CCB /* NewsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */; };
 		AAC7E6D81685397300F44CCB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E6D71685397300F44CCB /* NewsViewController.m */; };
@@ -94,6 +95,8 @@
 		AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-200x160.png"; sourceTree = "<group>"; };
 		AAABF6CA1688BF1100F2C707 /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
 		AAABF6CB1688BF1100F2C707 /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		AAC47E63168DB0B2009A676C /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewCell.h; sourceTree = "<group>"; };
+		AAC47E64168DB0B2009A676C /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewCell.m; sourceTree = "<group>"; };
 		AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPhone.xib; sourceTree = "<group>"; };
 		AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPad.xib; sourceTree = "<group>"; };
 		AAC7E6D61685397300F44CCB /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				AA9436E5168BB660002D4ED1 /* AlbumViewController_iPad.xib */,
 				AA9436E7168BB693002D4ED1 /* AlbumViewController.h */,
 				AA9436E8168BB693002D4ED1 /* AlbumViewController.m */,
+				AAC47E63168DB0B2009A676C /* PhotoViewCell.h */,
+				AAC47E64168DB0B2009A676C /* PhotoViewCell.m */,
 			);
 			path = "South Ridge App iOS";
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				AAD755BF168720BC00DCC52F /* SVProgressHUD.m in Sources */,
 				AAABF6CC1688BF1100F2C707 /* ImageHelper.m in Sources */,
 				AA9436E9168BB693002D4ED1 /* AlbumViewController.m in Sources */,
+				AAC47E65168DB0B2009A676C /* PhotoViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
