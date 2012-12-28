@@ -9,4 +9,8 @@ Wiki - http://github.com/dragthor/south-ridge-app-ios/wiki
 
 MIT License - http://en.wikipedia.org/wiki/MIT_License
 
+SVProgressHUD - https://github.com/samvermette/SVProgressHUD
+
+AFNetworking - http://gowalla.com
+
 Icons by Glyphish (non-free icons require that you purchase a license) - http://glyphish.com
