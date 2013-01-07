@@ -26,12 +26,19 @@
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
 
-@interface PodcastViewController ()
+@interface PodcastViewController () {
+    
+}
+
+@property (weak, nonatomic) SSPullToRefreshView *refreshPodcastView;
+@property BOOL pullLoading;
 
 @end
 
 @implementation PodcastViewController
 
+@synthesize refreshPodcastView;
+@synthesize pullLoading;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,8 +53,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
-  
+    self.refreshPodcastView = [[SSPullToRefreshView alloc] initWithScrollView:self.podcastTable delegate:self];
+
+    self.refreshPodcastView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
+                                     
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     [self populatePodcasts];
 }
 
@@ -87,7 +100,7 @@
         cell.imageView.image = [ImageHelper imageWithImage:image scaledToSize:CGSizeMake(100, 80)];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        //
+        NSLog(@"podcast thumbnail %@ error - %@", imageUrl, error);
     }];
     
     return cell;
@@ -102,7 +115,7 @@
 }
 
 -(void) populatePodcasts {
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    pullLoading = YES;
     
     NSURL *url = [NSURL URLWithString:@"http://dragthor.github.com/southridge/SouthRidgePodcast.json"];
     
@@ -117,11 +130,31 @@
         [_podcastTable reloadData];
         
         [SVProgressHUD dismiss];
+        
+        [self.refreshPodcastView finishLoading];
+        
+        pullLoading = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"populatePodcasts error - %@", error);
+        
         [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
+        
+        [SVProgressHUD dismiss];
+        
+        [self.refreshPodcastView finishLoading];
+        
+        pullLoading = NO;
     }];
     
     [operation start];
+}
+
+- (BOOL)pullToRefreshViewShouldStartLoading:(SSPullToRefreshView *)view {
+    return !pullLoading;
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self populatePodcasts];
 }
 
 @end

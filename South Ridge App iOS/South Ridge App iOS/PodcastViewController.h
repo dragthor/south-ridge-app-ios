@@ -22,8 +22,9 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "SSPullToRefresh.h"
 
-@interface PodcastViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface PodcastViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate> {
     NSArray *podcasts;
 }
 

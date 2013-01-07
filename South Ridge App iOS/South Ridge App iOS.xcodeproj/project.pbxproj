@@ -31,6 +31,12 @@
 		AAABF6C81688BE1F00F2C707 /* thumb-200x160.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */; };
 		AAABF6CC1688BF1100F2C707 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAABF6CB1688BF1100F2C707 /* ImageHelper.m */; };
 		AAC47E65168DB0B2009A676C /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC47E64168DB0B2009A676C /* PhotoViewCell.m */; };
+		AAC7C771169B0044008C69F6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C767169B0044008C69F6 /* LICENSE */; };
+		AAC7C772169B0044008C69F6 /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C768169B0044008C69F6 /* Readme.markdown */; };
+		AAC7C773169B0044008C69F6 /* SSPullToRefresh.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C76A169B0044008C69F6 /* SSPullToRefresh.podspec */; };
+		AAC7C774169B0044008C69F6 /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7C76C169B0044008C69F6 /* SSPullToRefreshDefaultContentView.m */; };
+		AAC7C775169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7C76E169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m */; };
+		AAC7C776169B0044008C69F6 /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7C770169B0044008C69F6 /* SSPullToRefreshView.m */; };
 		AAC7E6D21685390B00F44CCB /* NewsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */; };
 		AAC7E6D51685394700F44CCB /* NewsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */; };
 		AAC7E6D81685397300F44CCB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E6D71685397300F44CCB /* NewsViewController.m */; };
@@ -97,6 +103,16 @@
 		AAABF6CB1688BF1100F2C707 /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
 		AAC47E63168DB0B2009A676C /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewCell.h; sourceTree = "<group>"; };
 		AAC47E64168DB0B2009A676C /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewCell.m; sourceTree = "<group>"; };
+		AAC7C767169B0044008C69F6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AAC7C768169B0044008C69F6 /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.markdown; sourceTree = "<group>"; };
+		AAC7C769169B0044008C69F6 /* SSPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefresh.h; sourceTree = "<group>"; };
+		AAC7C76A169B0044008C69F6 /* SSPullToRefresh.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSPullToRefresh.podspec; sourceTree = "<group>"; };
+		AAC7C76B169B0044008C69F6 /* SSPullToRefreshDefaultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshDefaultContentView.h; sourceTree = "<group>"; };
+		AAC7C76C169B0044008C69F6 /* SSPullToRefreshDefaultContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshDefaultContentView.m; sourceTree = "<group>"; };
+		AAC7C76D169B0044008C69F6 /* SSPullToRefreshSimpleContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshSimpleContentView.h; sourceTree = "<group>"; };
+		AAC7C76E169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshSimpleContentView.m; sourceTree = "<group>"; };
+		AAC7C76F169B0044008C69F6 /* SSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshView.h; sourceTree = "<group>"; };
+		AAC7C770169B0044008C69F6 /* SSPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshView.m; sourceTree = "<group>"; };
 		AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPhone.xib; sourceTree = "<group>"; };
 		AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController_iPad.xib; sourceTree = "<group>"; };
 		AAC7E6D61685397300F44CCB /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
@@ -214,6 +230,23 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		AAC7C766169B0044008C69F6 /* sspulltorefresh */ = {
+			isa = PBXGroup;
+			children = (
+				AAC7C767169B0044008C69F6 /* LICENSE */,
+				AAC7C768169B0044008C69F6 /* Readme.markdown */,
+				AAC7C769169B0044008C69F6 /* SSPullToRefresh.h */,
+				AAC7C76A169B0044008C69F6 /* SSPullToRefresh.podspec */,
+				AAC7C76B169B0044008C69F6 /* SSPullToRefreshDefaultContentView.h */,
+				AAC7C76C169B0044008C69F6 /* SSPullToRefreshDefaultContentView.m */,
+				AAC7C76D169B0044008C69F6 /* SSPullToRefreshSimpleContentView.h */,
+				AAC7C76E169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m */,
+				AAC7C76F169B0044008C69F6 /* SSPullToRefreshView.h */,
+				AAC7C770169B0044008C69F6 /* SSPullToRefreshView.m */,
+			);
+			path = sspulltorefresh;
+			sourceTree = "<group>";
+		};
 		AACDEBC6168472AA0016B2EA = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +343,7 @@
 		AACDEC171684743E0016B2EA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				AAC7C766169B0044008C69F6 /* sspulltorefresh */,
 				AAD755BA168720BC00DCC52F /* SVProgressHUD */,
 				AACDEC18168474540016B2EA /* AFNetworking */,
 			);
@@ -438,6 +472,9 @@
 				AAABF6C81688BE1F00F2C707 /* thumb-200x160.png in Resources */,
 				AA9436E3168BB646002D4ED1 /* AlbumViewController_iPhone.xib in Resources */,
 				AA9436E6168BB660002D4ED1 /* AlbumViewController_iPad.xib in Resources */,
+				AAC7C771169B0044008C69F6 /* LICENSE in Resources */,
+				AAC7C772169B0044008C69F6 /* Readme.markdown in Resources */,
+				AAC7C773169B0044008C69F6 /* SSPullToRefresh.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +505,9 @@
 				AAABF6CC1688BF1100F2C707 /* ImageHelper.m in Sources */,
 				AA9436E9168BB693002D4ED1 /* AlbumViewController.m in Sources */,
 				AAC47E65168DB0B2009A676C /* PhotoViewCell.m in Sources */,
+				AAC7C774169B0044008C69F6 /* SSPullToRefreshDefaultContentView.m in Sources */,
+				AAC7C775169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m in Sources */,
+				AAC7C776169B0044008C69F6 /* SSPullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
