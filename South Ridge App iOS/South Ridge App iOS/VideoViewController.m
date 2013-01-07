@@ -26,11 +26,19 @@
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
 
-@interface VideoViewController ()
+@interface VideoViewController () {
+    
+}
+
+@property (weak, nonatomic) SSPullToRefreshView *refreshVideoView;
+@property BOOL pullLoading;
 
 @end
 
 @implementation VideoViewController
+
+@synthesize refreshVideoView;
+@synthesize pullLoading;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,7 +54,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
+    self.refreshVideoView = [[SSPullToRefreshView alloc] initWithScrollView:self.videoTable delegate:self];
+    
+    self.refreshVideoView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
+    
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     [self populateVideos];
 }
 
@@ -98,7 +113,7 @@
 }
 
 -(void) populateVideos {
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    pullLoading = YES;
     
     NSURL *url = [NSURL URLWithString:@"http://vimeo.com/api/v2/benstapley/videos.json"];
     
@@ -128,10 +143,30 @@
         [_videoTable reloadData];
         
         [SVProgressHUD dismiss];
+        
+        [self.refreshVideoView finishLoading];
+        
+        pullLoading = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"populateVideos error - %@", error);
+        
         [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
+        
+        [SVProgressHUD dismiss];
+        
+        [self.refreshVideoView finishLoading];
+        
+        pullLoading = NO;
     }];
     
     [operation start];
+}
+
+- (BOOL)pullToRefreshViewShouldStartLoading:(SSPullToRefreshView *)view {
+    return !pullLoading;
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self populateVideos];
 }
 @end

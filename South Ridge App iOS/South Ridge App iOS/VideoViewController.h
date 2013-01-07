@@ -22,8 +22,9 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "SSPullToRefresh.h"
 
-@interface VideoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface VideoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate> {
     NSMutableArray *videos;
 }
 
