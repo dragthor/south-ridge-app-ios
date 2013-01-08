@@ -27,11 +27,19 @@
 #import "ImageHelper.h"
 #import "AlbumViewController.h"
 
-@interface PhotoViewController ()
+@interface PhotoViewController () {
+    
+}
+
+@property (weak, nonatomic) SSPullToRefreshView *refreshPhotoView;
+@property BOOL pullLoading;
 
 @end
 
 @implementation PhotoViewController
+
+@synthesize refreshPhotoView;
+@synthesize pullLoading;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,7 +55,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
+    self.refreshPhotoView = [[SSPullToRefreshView alloc] initWithScrollView:self.albumTable delegate:self];
+    
+    self.refreshPhotoView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
+    
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     [self populateAlbums];
 }
 
@@ -148,7 +163,7 @@
 }
 
 -(void) populateAlbums {
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    pullLoading = YES;
     
     NSURL *url = [NSURL URLWithString:@"http://graph.facebook.com/southridgecommunitychurch/albums/"];
     
@@ -163,10 +178,30 @@
         [_albumTable reloadData];
         
         [SVProgressHUD dismiss];
+        
+        [self.refreshPhotoView finishLoading];
+        
+        pullLoading = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"populateAlbums error - %@", error);
+        
         [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
+        
+        [SVProgressHUD dismiss];
+        
+        [self.refreshPhotoView finishLoading];
+        
+        pullLoading = NO;
     }];
     
     [operation start];
+}
+
+- (BOOL)pullToRefreshViewShouldStartLoading:(SSPullToRefreshView *)view {
+    return !pullLoading;
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self populateAlbums];
 }
 @end

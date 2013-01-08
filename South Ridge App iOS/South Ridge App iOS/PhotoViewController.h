@@ -22,8 +22,9 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "SSPullToRefresh.h"
 
-@interface PhotoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface PhotoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SSPullToRefreshViewDelegate> {
     NSArray *albums;
 }
 
