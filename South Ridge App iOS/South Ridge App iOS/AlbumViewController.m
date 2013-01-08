@@ -61,8 +61,11 @@
 }
 
 -(IBAction)done {
+    [SVProgressHUD dismiss];
+    
     [self dismissViewControllerAnimated:YES completion:^{
         // Done.
+        self.albumCollection = nil;
     }];
 }
 
