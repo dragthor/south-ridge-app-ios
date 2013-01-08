@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA199C5F169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA199C5E169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib */; };
+		AA199C62169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA199C61169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib */; };
+		AA199C65169C3236003E0B02 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA199C64169C3236003E0B02 /* PhotoDetailViewController.m */; };
 		AA9436E3168BB646002D4ED1 /* AlbumViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9436E2168BB646002D4ED1 /* AlbumViewController_iPhone.xib */; };
 		AA9436E6168BB660002D4ED1 /* AlbumViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9436E5168BB660002D4ED1 /* AlbumViewController_iPad.xib */; };
 		AA9436E9168BB693002D4ED1 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9436E8168BB693002D4ED1 /* AlbumViewController.m */; };
@@ -75,6 +78,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA199C5E169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewDetailController_iPhone.xib; sourceTree = "<group>"; };
+		AA199C61169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewDetailController_iPad.xib; sourceTree = "<group>"; };
+		AA199C63169C3236003E0B02 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		AA199C64169C3236003E0B02 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		AA9436E2168BB646002D4ED1 /* AlbumViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumViewController_iPhone.xib; sourceTree = "<group>"; };
 		AA9436E5168BB660002D4ED1 /* AlbumViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumViewController_iPad.xib; sourceTree = "<group>"; };
 		AA9436E7168BB693002D4ED1 /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
@@ -313,6 +320,10 @@
 				AA9436E8168BB693002D4ED1 /* AlbumViewController.m */,
 				AAC47E63168DB0B2009A676C /* PhotoViewCell.h */,
 				AAC47E64168DB0B2009A676C /* PhotoViewCell.m */,
+				AA199C5E169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib */,
+				AA199C61169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib */,
+				AA199C63169C3236003E0B02 /* PhotoDetailViewController.h */,
+				AA199C64169C3236003E0B02 /* PhotoDetailViewController.m */,
 			);
 			path = "South Ridge App iOS";
 			sourceTree = "<group>";
@@ -475,6 +486,8 @@
 				AAC7C771169B0044008C69F6 /* LICENSE in Resources */,
 				AAC7C772169B0044008C69F6 /* Readme.markdown in Resources */,
 				AAC7C773169B0044008C69F6 /* SSPullToRefresh.podspec in Resources */,
+				AA199C5F169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib in Resources */,
+				AA199C62169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +521,7 @@
 				AAC7C774169B0044008C69F6 /* SSPullToRefreshDefaultContentView.m in Sources */,
 				AAC7C775169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m in Sources */,
 				AAC7C776169B0044008C69F6 /* SSPullToRefreshView.m in Sources */,
+				AA199C65169C3236003E0B02 /* PhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
