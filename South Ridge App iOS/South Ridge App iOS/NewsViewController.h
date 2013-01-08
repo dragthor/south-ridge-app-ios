@@ -22,8 +22,9 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "SSPullToRefresh.h"
 
-@interface NewsViewController : UIViewController
+@interface NewsViewController : UIViewController <SSPullToRefreshViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *newsLabel;
 

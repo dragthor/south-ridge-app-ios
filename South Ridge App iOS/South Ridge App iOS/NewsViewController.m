@@ -25,11 +25,19 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 
-@interface NewsViewController ()
+@interface NewsViewController () {
+    
+}
+
+@property (weak, nonatomic) SSPullToRefreshView *refreshNewsView;
+@property BOOL pullLoading;
 
 @end
 
 @implementation NewsViewController
+
+@synthesize refreshNewsView;
+@synthesize pullLoading;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,7 +52,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
+    self.refreshNewsView = [[SSPullToRefreshView alloc] initWithScrollView:self.newsLabel delegate:self];
+    
+    self.refreshNewsView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
+    
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
     [self populateNews];
 }
 
@@ -55,7 +70,7 @@
 }
 
 -(void) populateNews {
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    pullLoading = YES;
     
     NSURL *url = [NSURL URLWithString:@"http://dragthor.github.com/southridge/eNews.json"];
     
@@ -88,8 +103,20 @@
         self.newsLabel.text = enews;
         
         [SVProgressHUD dismiss];
+        
+        [self.refreshNewsView finishLoading];
+        
+        pullLoading = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"populateNews error - %@", error);
+        
         [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
+        
+        [SVProgressHUD dismiss];
+        
+        [self.refreshNewsView finishLoading];
+        
+        pullLoading = NO;
     }];
     
     [operation start];
@@ -102,4 +129,13 @@
         s = [s stringByReplacingCharactersInRange:r withString:@""];
     return s;
 }
+
+- (BOOL)pullToRefreshViewShouldStartLoading:(SSPullToRefreshView *)view {
+    return !pullLoading;
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self populateNews];
+}
+
 @end
