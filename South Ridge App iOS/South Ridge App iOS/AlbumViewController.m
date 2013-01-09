@@ -80,7 +80,7 @@
     
     NSDictionary *item = [photos objectAtIndex:indexPath.row];
 
-    NSString *pictureUrl = [item valueForKey:@"picture"];
+    NSString *pictureUrl = [item valueForKey:@"source"];
 
     [cell setImage:pictureUrl];
     
@@ -91,7 +91,7 @@
     
     NSDictionary *item = [photos objectAtIndex:indexPath.row];
     
-    NSString *photoUrl = [item valueForKey:@"picture"];
+    NSString *photoUrl = [item valueForKey:@"source"];
     
     PhotoDetailViewController *photo;
     
