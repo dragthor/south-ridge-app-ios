@@ -33,6 +33,7 @@
 		AAABF6C71688BE1F00F2C707 /* thumb-100x80.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C51688BE1F00F2C707 /* thumb-100x80.png */; };
 		AAABF6C81688BE1F00F2C707 /* thumb-200x160.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */; };
 		AAABF6CC1688BF1100F2C707 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAABF6CB1688BF1100F2C707 /* ImageHelper.m */; };
+		AABE9678169DA21E0024334A /* AlertBox.m in Sources */ = {isa = PBXBuildFile; fileRef = AABE9677169DA21E0024334A /* AlertBox.m */; };
 		AAC47E65168DB0B2009A676C /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC47E64168DB0B2009A676C /* PhotoViewCell.m */; };
 		AAC7C771169B0044008C69F6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C767169B0044008C69F6 /* LICENSE */; };
 		AAC7C772169B0044008C69F6 /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C768169B0044008C69F6 /* Readme.markdown */; };
@@ -108,6 +109,8 @@
 		AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-200x160.png"; sourceTree = "<group>"; };
 		AAABF6CA1688BF1100F2C707 /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
 		AAABF6CB1688BF1100F2C707 /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		AABE9676169DA21E0024334A /* AlertBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertBox.h; sourceTree = "<group>"; };
+		AABE9677169DA21E0024334A /* AlertBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBox.m; sourceTree = "<group>"; };
 		AAC47E63168DB0B2009A676C /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewCell.h; sourceTree = "<group>"; };
 		AAC47E64168DB0B2009A676C /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewCell.m; sourceTree = "<group>"; };
 		AAC7C767169B0044008C69F6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				AAC47E64168DB0B2009A676C /* PhotoViewCell.m */,
 				AA199C63169C3236003E0B02 /* PhotoDetailViewController.h */,
 				AA199C64169C3236003E0B02 /* PhotoDetailViewController.m */,
+				AABE9676169DA21E0024334A /* AlertBox.h */,
+				AABE9677169DA21E0024334A /* AlertBox.m */,
 			);
 			path = "South Ridge App iOS";
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				AAC7C775169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m in Sources */,
 				AAC7C776169B0044008C69F6 /* SSPullToRefreshView.m in Sources */,
 				AA199C65169C3236003E0B02 /* PhotoDetailViewController.m in Sources */,
+				AABE9678169DA21E0024334A /* AlertBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

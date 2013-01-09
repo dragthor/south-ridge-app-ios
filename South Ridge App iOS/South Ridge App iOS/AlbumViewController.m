@@ -98,6 +98,8 @@
     NSDictionary *item = [photos objectAtIndex:indexPath.row];
     
     NSString *pictureUrl = [item valueForKey:@"picture"];
+    
+    
 }
 
 -(void) populatePhotos {
