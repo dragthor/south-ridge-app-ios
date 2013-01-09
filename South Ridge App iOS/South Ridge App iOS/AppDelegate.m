@@ -22,7 +22,6 @@
  */
 
 #import "AppDelegate.h"
-
 #import "PhotoViewController.h"
 #import "PodcastViewController.h"
 #import "VideoViewController.h"
@@ -53,9 +52,13 @@
     }
     
     self.tabBarController = [[UITabBarController alloc] init];
+    
     self.tabBarController.viewControllers = @[photoController, podcastController, videoController, newsController, aboutController];
+    
     self.window.rootViewController = self.tabBarController;
+    
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -85,19 +88,5 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 @end

@@ -26,6 +26,7 @@
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
 #import "AlbumViewController.h"
+#import "AlertBox.h"
 
 @interface PhotoViewController () {
     
@@ -64,12 +65,6 @@
     [SVProgressHUD showWithStatus:@"Loading..."];
     
     [self populateAlbums];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,10 +113,10 @@
             cell.imageView.image = [ImageHelper imageWithImage:image scaledToSize:CGSizeMake(100, 80)];
             
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-            //
+            NSLog(@"Cover photo image - %@ - %@", coverPhotoUrl, error);
         }];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        
+        NSLog(@"Cover photo json - %@", error);
     }];
     
     [operation start];

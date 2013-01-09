@@ -50,7 +50,7 @@
         // Note: the view collection handles "resize".
         self.photo.image = image;
      } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-         //
+         NSLog(@"Cell photo %@ error - %@", imageUrl, error);
      }];
 }
 

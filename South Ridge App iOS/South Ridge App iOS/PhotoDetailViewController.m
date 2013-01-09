@@ -45,19 +45,10 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    // [AlertBox showAlert:@"Photo" : pictureUrl];
-    //album.albumNumber = albumId;
-    //album.albumName = albumName;
-    
     NSURL *url = [NSURL URLWithString:self.photoUrl];
     
+    // TODO: Add spinner HUD.
     [self.imgPhoto setImageWithURL:url];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(IBAction)done {

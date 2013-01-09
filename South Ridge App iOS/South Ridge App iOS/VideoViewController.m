@@ -65,12 +65,6 @@
     [self populateVideos];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *cellIdentifier = @"cell";
@@ -98,7 +92,7 @@
         cell.imageView.image = [ImageHelper imageWithImage:image scaledToSize:CGSizeMake(100, 80)];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        //
+        NSLog(@"Video thumbnail %@ - error - %@", imageUrl, error);
     }];
     
     return cell;

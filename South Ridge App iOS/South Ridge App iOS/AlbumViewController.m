@@ -56,12 +56,6 @@
     [self populatePhotos];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(IBAction)done {
     [SVProgressHUD dismiss];
     
@@ -95,11 +89,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    //PhotoViewCell *cell = (PhotoViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
     NSDictionary *item = [photos objectAtIndex:indexPath.row];
     
-    NSString *pictureUrl = [item valueForKey:@"picture"];
+    NSString *photoUrl = [item valueForKey:@"picture"];
     
     PhotoDetailViewController *photo;
     
@@ -109,7 +101,7 @@
         photo = [[PhotoDetailViewController alloc] initWithNibName:@"PhotoViewDetailController_iPad" bundle:nil];
     }
         
-    photo.photoUrl = pictureUrl;
+    photo.photoUrl = photoUrl;
 
     [self presentViewController:photo animated:YES completion:^{
         // Done showing callback.
