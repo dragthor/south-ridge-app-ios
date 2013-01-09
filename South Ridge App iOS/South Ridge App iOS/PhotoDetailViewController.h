@@ -28,4 +28,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnDone;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
 
+@property (weak, nonatomic) NSString *photoUrl;
+
+-(IBAction) done;
+
 @end

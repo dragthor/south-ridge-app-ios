@@ -22,6 +22,8 @@
  */
 
 #import "PhotoDetailViewController.h"
+#import "SVProgressHUD.h"
+#import "AFNetworking.h"
 
 @interface PhotoDetailViewController ()
 
@@ -41,13 +43,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
+    // [AlertBox showAlert:@"Photo" : pictureUrl];
+    //album.albumNumber = albumId;
+    //album.albumName = albumName;
+    
+    NSURL *url = [NSURL URLWithString:self.photoUrl];
+    
+    [self.imgPhoto setImageWithURL:url];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)done {
+    [SVProgressHUD dismiss];
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        // Done.
+        self.imgPhoto = nil;
+    }];
 }
 
 @end

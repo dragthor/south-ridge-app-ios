@@ -22,10 +22,12 @@
  */
 
 #import "AlbumViewController.h"
+#import "PhotoDetailViewController.h"
 #import "PhotoViewCell.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
+#import "AlertBox.h"
 
 @interface AlbumViewController ()
 
@@ -93,13 +95,25 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    PhotoViewCell *cell = (PhotoViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    //PhotoViewCell *cell = (PhotoViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     NSDictionary *item = [photos objectAtIndex:indexPath.row];
     
     NSString *pictureUrl = [item valueForKey:@"picture"];
     
+    PhotoDetailViewController *photo;
     
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        photo = [[PhotoDetailViewController alloc] initWithNibName:@"PhotoViewDetailController_iPhone" bundle:nil];
+    } else {
+        photo = [[PhotoDetailViewController alloc] initWithNibName:@"PhotoViewDetailController_iPad" bundle:nil];
+    }
+        
+    photo.photoUrl = pictureUrl;
+
+    [self presentViewController:photo animated:YES completion:^{
+        // Done showing callback.
+    }];
 }
 
 -(void) populatePhotos {
@@ -108,7 +122,7 @@
     NSString *photosUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@/photos", self.albumNumber];
     
     NSURL *url = [NSURL URLWithString:photosUrl];
-    
+
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     
     AFJSONRequestOperation *operation;
