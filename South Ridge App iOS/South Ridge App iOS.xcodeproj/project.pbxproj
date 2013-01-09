@@ -227,6 +227,27 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		AABE9670169DA15A0024334A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA9CA8C41685401C00B2F220 /* AboutViewController_iPad.xib */,
+				AA9CA8C61685403300B2F220 /* AboutViewController_iPhone.xib */,
+				AA9436E2168BB646002D4ED1 /* AlbumViewController_iPhone.xib */,
+				AA9436E5168BB660002D4ED1 /* AlbumViewController_iPad.xib */,
+				AA199C5E169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib */,
+				AA199C61169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib */,
+				AACDEC44168475A30016B2EA /* VideoViewController_iPad.xib */,
+				AACDEC46168475B80016B2EA /* VideoViewController_iPhone.xib */,
+				AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */,
+				AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */,
+				AACDEBFB168472AA0016B2EA /* PhotoViewController_iPhone.xib */,
+				AACDEBFE168472AB0016B2EA /* PhotoViewController_iPad.xib */,
+				AACDEC01168472AB0016B2EA /* PodcastViewController_iPhone.xib */,
+				AACDEC04168472AB0016B2EA /* PodcastViewController_iPad.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		AAC2377E1686246500B84050 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +306,7 @@
 		AACDEBDB168472AA0016B2EA /* South Ridge App iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AABE9670169DA15A0024334A /* UI */,
 				AAABF6C91688BEE600F2C707 /* Shared */,
 				AAABF68B1688ABEC00F2C707 /* LaunchImages */,
 				AAABF67D1688AB6600F2C707 /* AppIcons */,
@@ -297,31 +319,17 @@
 				AACDEBEE168472AA0016B2EA /* PhotoViewController.m */,
 				AACDEBF4168472AA0016B2EA /* PodcastViewController.h */,
 				AACDEBF5168472AA0016B2EA /* PodcastViewController.m */,
-				AACDEBFB168472AA0016B2EA /* PhotoViewController_iPhone.xib */,
-				AACDEBFE168472AB0016B2EA /* PhotoViewController_iPad.xib */,
-				AACDEC01168472AB0016B2EA /* PodcastViewController_iPhone.xib */,
-				AACDEC04168472AB0016B2EA /* PodcastViewController_iPad.xib */,
 				AACDEBDC168472AA0016B2EA /* Supporting Files */,
 				AACDEC41168475880016B2EA /* VideoViewController.h */,
 				AACDEC42168475880016B2EA /* VideoViewController.m */,
-				AACDEC44168475A30016B2EA /* VideoViewController_iPad.xib */,
-				AACDEC46168475B80016B2EA /* VideoViewController_iPhone.xib */,
-				AAC7E6D11685390B00F44CCB /* NewsViewController_iPhone.xib */,
-				AAC7E6D41685394700F44CCB /* NewsViewController_iPad.xib */,
 				AAC7E6D61685397300F44CCB /* NewsViewController.h */,
 				AAC7E6D71685397300F44CCB /* NewsViewController.m */,
 				AA9CA8C016853FE500B2F220 /* AboutViewController.h */,
 				AA9CA8C116853FE500B2F220 /* AboutViewController.m */,
-				AA9CA8C41685401C00B2F220 /* AboutViewController_iPad.xib */,
-				AA9CA8C61685403300B2F220 /* AboutViewController_iPhone.xib */,
-				AA9436E2168BB646002D4ED1 /* AlbumViewController_iPhone.xib */,
-				AA9436E5168BB660002D4ED1 /* AlbumViewController_iPad.xib */,
 				AA9436E7168BB693002D4ED1 /* AlbumViewController.h */,
 				AA9436E8168BB693002D4ED1 /* AlbumViewController.m */,
 				AAC47E63168DB0B2009A676C /* PhotoViewCell.h */,
 				AAC47E64168DB0B2009A676C /* PhotoViewCell.m */,
-				AA199C5E169C2E18003E0B02 /* PhotoViewDetailController_iPhone.xib */,
-				AA199C61169C2E41003E0B02 /* PhotoViewDetailController_iPad.xib */,
 				AA199C63169C3236003E0B02 /* PhotoDetailViewController.h */,
 				AA199C64169C3236003E0B02 /* PhotoDetailViewController.m */,
 			);
