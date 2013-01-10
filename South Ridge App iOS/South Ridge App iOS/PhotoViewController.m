@@ -62,9 +62,7 @@
     
     self.refreshPhotoView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
     
-    [SVProgressHUD showWithStatus:@"Loading..."];
-    
-    [self populateAlbums];
+    [self populateAlbums:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -124,7 +122,6 @@
     return cell;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return albums.count;
 }
@@ -157,8 +154,19 @@
     }];
 }
 
--(void) populateAlbums {
+-(void) populateAlbums:(BOOL) showHUDLoading {
+    if (self.reach.isReachable == NO) {
+        [SVProgressHUD dismiss];
+        
+        [self.refreshPhotoView finishLoading];
+        
+        [AlertBox showAlert:@"Network Status" :@"An internet connection is required."];
+        return;
+    }
+    
     pullLoading = YES;
+    
+    if (showHUDLoading) [SVProgressHUD showWithStatus:@"Loading..."];
     
     NSURL *url = [NSURL URLWithString:@"http://graph.facebook.com/southridgecommunitychurch/albums/"];
     
@@ -197,6 +205,6 @@
 }
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
-    [self populateAlbums];
+    [self populateAlbums: NO];
 }
 @end

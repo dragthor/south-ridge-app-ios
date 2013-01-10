@@ -53,7 +53,7 @@
 
     self.albumTitle.title = self.albumName;
     
-    [self populatePhotos];
+    [self populateAlbumPhotos: YES];
 }
 
 -(IBAction)done {
@@ -108,8 +108,8 @@
     }];
 }
 
--(void) populatePhotos {
-    [SVProgressHUD showWithStatus:@"Loading..."];
+-(void) populateAlbumPhotos:(BOOL) showHUDLoading  {
+    if (showHUDLoading) [SVProgressHUD showWithStatus:@"Loading..."];
     
     NSString *photosUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@/photos", self.albumNumber];
     

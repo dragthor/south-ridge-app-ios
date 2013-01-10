@@ -23,11 +23,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SSPullToRefresh.h"
+#import "Reachability.h"
 
 @interface PhotoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SSPullToRefreshViewDelegate> {
     NSArray *albums;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *albumTable;
+@property (weak, nonatomic) Reachability *reach;
 
 @end

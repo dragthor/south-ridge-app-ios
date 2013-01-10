@@ -32,12 +32,20 @@
 
 @implementation AppDelegate
 
+Reachability* _reach = nil;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    UIViewController *photoController, *podcastController, *videoController, *newsController, *aboutController;
+    AboutViewController *aboutController;
+
+    // Data "aware" controllers.
+    PhotoViewController *photoController;
+    PodcastViewController *podcastController;
+    VideoViewController *videoController;
+    NewsViewController *newsController;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         photoController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController_iPhone" bundle:nil];
@@ -53,27 +61,19 @@
         aboutController = [[AboutViewController alloc] initWithNibName:@"AboutViewController_iPad" bundle:nil];
     }
     
-    self.tabBarController = [[UITabBarController alloc] init];
-    
-    self.tabBarController.viewControllers = @[photoController, podcastController, videoController, newsController, aboutController];
-    
-    self.window.rootViewController = self.tabBarController;
-    
-    [self.window makeKeyAndVisible];
-    
-    Reachability* reach = [Reachability reachabilityForInternetConnection];
+    _reach = [Reachability reachabilityForInternetConnection];
     
     // Tell the reachability that we DO want to be reachable on 3G/EDGE/CDMA.
-    reach.reachableOnWWAN = YES;
+    _reach.reachableOnWWAN = YES;
     
-    reach.reachableBlock = ^(Reachability*reach)
+    _reach.reachableBlock = ^(Reachability*reach)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             [AlertBox showAlert:@"Network Status" :@"Connected."];
         });
     };
     
-    reach.unreachableBlock = ^(Reachability*reach)
+    _reach.unreachableBlock = ^(Reachability*reach)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             [AlertBox showAlert:@"Network Status" :@"An internet connection is required."];
@@ -81,7 +81,21 @@
     };
     
     // Starting the notifier causes the reachability object to retain itself.
-    [reach startNotifier];
+    [_reach startNotifier];
+    
+    // Set up reachability detection for each controller.
+    photoController.reach = _reach;
+    podcastController.reach = _reach;
+    videoController.reach = _reach;
+    newsController.reach = _reach;
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    self.tabBarController.viewControllers = @[photoController, podcastController, videoController, newsController, aboutController];
+    
+    self.window.rootViewController = self.tabBarController;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

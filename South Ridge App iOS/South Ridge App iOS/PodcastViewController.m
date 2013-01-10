@@ -25,6 +25,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
+#import "AlertBox.h"
 
 @interface PodcastViewController () {
     
@@ -58,10 +59,8 @@
     self.refreshPodcastView = [[SSPullToRefreshView alloc] initWithScrollView:self.podcastTable delegate:self];
 
     self.refreshPodcastView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
-                                     
-    [SVProgressHUD showWithStatus:@"Loading..."];
-    
-    [self populatePodcasts];
+
+    [self populatePodcasts: YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -108,8 +107,19 @@
     return 1;
 }
 
--(void) populatePodcasts {
+-(void) populatePodcasts:(BOOL) showHUDLoading {
+    if (self.reach.isReachable == NO) {
+        [SVProgressHUD dismiss];
+        
+        [self.refreshPodcastView finishLoading];
+        
+        [AlertBox showAlert:@"Network Status" :@"An internet connection is required."];
+        return;
+    }
+    
     pullLoading = YES;
+    
+    if (showHUDLoading) [SVProgressHUD showWithStatus:@"Loading..."];
     
     NSURL *url = [NSURL URLWithString:@"http://dragthor.github.com/southridge/SouthRidgePodcast.json"];
     
@@ -148,7 +158,7 @@
 }
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
-    [self populatePodcasts];
+    [self populatePodcasts: NO];
 }
 
 @end

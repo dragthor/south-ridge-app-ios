@@ -23,9 +23,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SSPullToRefresh.h"
+#import "Reachability.h"
 
 @interface NewsViewController : UIViewController <SSPullToRefreshViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *newsLabel;
+@property (weak, nonatomic) Reachability *reach;
 
 @end

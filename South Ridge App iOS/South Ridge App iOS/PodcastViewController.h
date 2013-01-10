@@ -23,11 +23,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SSPullToRefresh.h"
+#import "Reachability.h"
 
 @interface PodcastViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate> {
     NSArray *podcasts;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *podcastTable;
+@property (weak, nonatomic) Reachability *reach;
 
 @end

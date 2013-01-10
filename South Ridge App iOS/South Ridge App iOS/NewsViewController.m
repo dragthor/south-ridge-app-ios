@@ -24,6 +24,7 @@
 #import "NewsViewController.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "AlertBox.h"
 
 @interface NewsViewController () {
     
@@ -58,13 +59,22 @@
     
     self.refreshNewsView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
     
-    [SVProgressHUD showWithStatus:@"Loading..."];
-    
-    [self populateNews];
+    [self populateNews: YES];
 }
 
--(void) populateNews {
+-(void) populateNews:(BOOL) showHUDLoading  {
+    if (self.reach.isReachable == NO) {
+        [SVProgressHUD dismiss];
+        
+        [self.refreshNewsView finishLoading];
+        
+        [AlertBox showAlert:@"Network Status" :@"An internet connection is required."];
+        return;
+    }
+    
     pullLoading = YES;
+    
+    if (showHUDLoading) [SVProgressHUD showWithStatus:@"Loading..."];
     
     NSURL *url = [NSURL URLWithString:@"http://dragthor.github.com/southridge/eNews.json"];
     
@@ -129,7 +139,7 @@
 }
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
-    [self populateNews];
+    [self populateNews: NO];
 }
 
 @end

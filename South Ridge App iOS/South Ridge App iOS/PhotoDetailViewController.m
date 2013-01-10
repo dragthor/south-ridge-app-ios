@@ -49,6 +49,15 @@
     
     // TODO: Add spinner HUD.
     [self.imgPhoto setImageWithURL:url];
+
+    /*
+    [self.imgPhoto setImageWithURLRequest:request placeholderImage:imgPlaceHolder success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        //<#code#>
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        //<#code#>
+    }];
+     
+    */
 }
 
 -(IBAction)done {

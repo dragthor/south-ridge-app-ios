@@ -23,11 +23,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SSPullToRefresh.h"
+#import "Reachability.h"
 
 @interface VideoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate> {
     NSMutableArray *videos;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *videoTable;
+@property (weak, nonatomic) Reachability *reach;
 
 @end

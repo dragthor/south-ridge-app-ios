@@ -25,6 +25,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "ImageHelper.h"
+#import "AlertBox.h"
 
 @interface VideoViewController () {
     
@@ -60,9 +61,7 @@
     
     self.refreshVideoView.contentView = [[SSPullToRefreshSimpleContentView alloc] init];
     
-    [SVProgressHUD showWithStatus:@"Loading..."];
-    
-    [self populateVideos];
+    [self populateVideos: YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -106,8 +105,19 @@
     return 1;
 }
 
--(void) populateVideos {
+-(void) populateVideos:(BOOL) showHUDLoading  {
+    if (self.reach.isReachable == NO) {
+        [SVProgressHUD dismiss];
+        
+        [self.refreshVideoView finishLoading];
+        
+        [AlertBox showAlert:@"Network Status" :@"An internet connection is required."];
+        return;
+    }
+    
     pullLoading = YES;
+    
+    if (showHUDLoading) [SVProgressHUD showWithStatus:@"Loading..."];
     
     NSURL *url = [NSURL URLWithString:@"http://vimeo.com/api/v2/benstapley/videos.json"];
     
@@ -161,6 +171,6 @@
 }
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
-    [self populateVideos];
+    [self populateVideos: NO];
 }
 @end
