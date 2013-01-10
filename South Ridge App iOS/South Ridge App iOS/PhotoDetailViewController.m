@@ -44,20 +44,23 @@
 {
     [super viewDidLoad];
     
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
 	// Do any additional setup after loading the view.
     NSURL *url = [NSURL URLWithString:self.photoUrl];
-    
-    // TODO: Add spinner HUD.
-    [self.imgPhoto setImageWithURL:url];
 
-    /*
-    [self.imgPhoto setImageWithURLRequest:request placeholderImage:imgPlaceHolder success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        //<#code#>
+    // TODO: Add reachability check.
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [self.imgPhoto setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        
+        self.imgPhoto.image = image;
+        
+        [SVProgressHUD dismiss];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        //<#code#>
+        [SVProgressHUD showErrorWithStatus:@"Error. Try again."];
     }];
-     
-    */
 }
 
 -(IBAction)done {
