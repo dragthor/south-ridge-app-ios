@@ -33,7 +33,10 @@
 		AAABF6C71688BE1F00F2C707 /* thumb-100x80.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C51688BE1F00F2C707 /* thumb-100x80.png */; };
 		AAABF6C81688BE1F00F2C707 /* thumb-200x160.png in Resources */ = {isa = PBXBuildFile; fileRef = AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */; };
 		AAABF6CC1688BF1100F2C707 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAABF6CB1688BF1100F2C707 /* ImageHelper.m */; };
-		AABE9678169DA21E0024334A /* AlertBox.m in Sources */ = {isa = PBXBuildFile; fileRef = AABE9677169DA21E0024334A /* AlertBox.m */; };
+		AAC3F6FC169E2F3600F416C2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F6FB169E2F3600F416C2 /* Reachability.m */; };
+		AAC3F6FF169E3AC200F416C2 /* AlertBox.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F6FE169E3AC200F416C2 /* AlertBox.m */; };
+		AAC3F701169E3C6400F416C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3F700169E3C6400F416C2 /* SystemConfiguration.framework */; };
+		AAC3F703169E3C7400F416C2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3F702169E3C7400F416C2 /* CFNetwork.framework */; };
 		AAC47E65168DB0B2009A676C /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC47E64168DB0B2009A676C /* PhotoViewCell.m */; };
 		AAC7C771169B0044008C69F6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C767169B0044008C69F6 /* LICENSE */; };
 		AAC7C772169B0044008C69F6 /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = AAC7C768169B0044008C69F6 /* Readme.markdown */; };
@@ -109,8 +112,12 @@
 		AAABF6C61688BE1F00F2C707 /* thumb-200x160.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-200x160.png"; sourceTree = "<group>"; };
 		AAABF6CA1688BF1100F2C707 /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
 		AAABF6CB1688BF1100F2C707 /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
-		AABE9676169DA21E0024334A /* AlertBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertBox.h; sourceTree = "<group>"; };
-		AABE9677169DA21E0024334A /* AlertBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBox.m; sourceTree = "<group>"; };
+		AAC3F6FA169E2F3600F416C2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AAC3F6FB169E2F3600F416C2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		AAC3F6FD169E3AC200F416C2 /* AlertBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertBox.h; sourceTree = "<group>"; };
+		AAC3F6FE169E3AC200F416C2 /* AlertBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBox.m; sourceTree = "<group>"; };
+		AAC3F700169E3C6400F416C2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AAC3F702169E3C7400F416C2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AAC47E63168DB0B2009A676C /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewCell.h; sourceTree = "<group>"; };
 		AAC47E64168DB0B2009A676C /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewCell.m; sourceTree = "<group>"; };
 		AAC7C767169B0044008C69F6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -184,6 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC3F703169E3C7400F416C2 /* CFNetwork.framework in Frameworks */,
+				AAC3F701169E3C6400F416C2 /* SystemConfiguration.framework in Frameworks */,
 				AAD755C2168722E900DCC52F /* QuartzCore.framework in Frameworks */,
 				AACDEBD6168472AA0016B2EA /* UIKit.framework in Frameworks */,
 				AACDEBD8168472AA0016B2EA /* Foundation.framework in Frameworks */,
@@ -224,6 +233,8 @@
 		AAABF6C91688BEE600F2C707 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AAC3F6FD169E3AC200F416C2 /* AlertBox.h */,
+				AAC3F6FE169E3AC200F416C2 /* AlertBox.m */,
 				AAABF6CA1688BF1100F2C707 /* ImageHelper.h */,
 				AAABF6CB1688BF1100F2C707 /* ImageHelper.m */,
 			);
@@ -259,6 +270,15 @@
 				AA94E7661686559800C7C968 /* logo.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		AAC3F6F8169E2EEC00F416C2 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3F6FA169E2F3600F416C2 /* Reachability.h */,
+				AAC3F6FB169E2F3600F416C2 /* Reachability.m */,
+			);
+			path = Apple;
 			sourceTree = "<group>";
 		};
 		AAC7C766169B0044008C69F6 /* sspulltorefresh */ = {
@@ -298,6 +318,8 @@
 		AACDEBD4168472AA0016B2EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAC3F702169E3C7400F416C2 /* CFNetwork.framework */,
+				AAC3F700169E3C6400F416C2 /* SystemConfiguration.framework */,
 				AAD755C1168722E900DCC52F /* QuartzCore.framework */,
 				AACDEBD5168472AA0016B2EA /* UIKit.framework */,
 				AACDEBD7168472AA0016B2EA /* Foundation.framework */,
@@ -335,8 +357,6 @@
 				AAC47E64168DB0B2009A676C /* PhotoViewCell.m */,
 				AA199C63169C3236003E0B02 /* PhotoDetailViewController.h */,
 				AA199C64169C3236003E0B02 /* PhotoDetailViewController.m */,
-				AABE9676169DA21E0024334A /* AlertBox.h */,
-				AABE9677169DA21E0024334A /* AlertBox.m */,
 			);
 			path = "South Ridge App iOS";
 			sourceTree = "<group>";
@@ -367,6 +387,7 @@
 		AACDEC171684743E0016B2EA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				AAC3F6F8169E2EEC00F416C2 /* Apple */,
 				AAC7C766169B0044008C69F6 /* sspulltorefresh */,
 				AAD755BA168720BC00DCC52F /* SVProgressHUD */,
 				AACDEC18168474540016B2EA /* AFNetworking */,
@@ -535,7 +556,8 @@
 				AAC7C775169B0044008C69F6 /* SSPullToRefreshSimpleContentView.m in Sources */,
 				AAC7C776169B0044008C69F6 /* SSPullToRefreshView.m in Sources */,
 				AA199C65169C3236003E0B02 /* PhotoDetailViewController.m in Sources */,
-				AABE9678169DA21E0024334A /* AlertBox.m in Sources */,
+				AAC3F6FC169E2F3600F416C2 /* Reachability.m in Sources */,
+				AAC3F6FF169E3AC200F416C2 /* AlertBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

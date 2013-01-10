@@ -27,6 +27,8 @@
 #import "VideoViewController.h"
 #import "NewsViewController.h"
 #import "AboutViewController.h"
+#import "Reachability.h"
+#import "AlertBox.h"
 
 @implementation AppDelegate
 
@@ -58,6 +60,28 @@
     self.window.rootViewController = self.tabBarController;
     
     [self.window makeKeyAndVisible];
+    
+    Reachability* reach = [Reachability reachabilityForInternetConnection];
+    
+    // Tell the reachability that we DO want to be reachable on 3G/EDGE/CDMA.
+    reach.reachableOnWWAN = YES;
+    
+    reach.reachableBlock = ^(Reachability*reach)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [AlertBox showAlert:@"Network Status" :@"Connected."];
+        });
+    };
+    
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [AlertBox showAlert:@"Network Status" :@"An internet connection is required."];
+        });
+    };
+    
+    // Starting the notifier causes the reachability object to retain itself.
+    [reach startNotifier];
     
     return YES;
 }
