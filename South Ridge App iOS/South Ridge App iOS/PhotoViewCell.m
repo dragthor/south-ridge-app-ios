@@ -24,6 +24,7 @@
 #import "PhotoViewCell.h"
 #import "AFNetworking.h"
 #import "ImageHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation PhotoViewCell
 
@@ -48,7 +49,12 @@
     [self.photo setImageWithURLRequest: podReq placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
 
         // Note: the view collection handles "resize".
+        
+        self.photo.layer.borderWidth = 1;
+        self.photo.layer.borderColor = [[UIColor blackColor] CGColor];
+        
         self.photo.image = image;
+        
      } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
          NSLog(@"Cell photo %@ error - %@", imageUrl, error);
      }];
